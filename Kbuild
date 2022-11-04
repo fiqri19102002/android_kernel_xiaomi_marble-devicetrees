@@ -1,3 +1,13 @@
+ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
+	dtbo-y += hw_fence/pineapple-hw-fence.dtbo \
+		pineapple-mm-rumi-overlay.dtbo \
+		pineapple-mm-cdp-overlay.dtbo \
+		pineapple-mm-mtp-overlay.dtbo \
+		pineapple-mm-qrd-overlay.dtbo \
+		pineapple-mm-mtp-nfc-overlay.dtbo \
+		pineapple-mm-cdp-nfc-overlay.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_KALAMA), y)
 	dtbo-y += hw_fence/kalama-hw-fence.dtbo \
 		kalama-mm-rumi-overlay.dtbo \
