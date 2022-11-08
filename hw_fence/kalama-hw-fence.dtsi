@@ -10,6 +10,12 @@
 		/* time register */
 		qcom,qtime-reg = <0xC221000 0x1000>;
 
+		/* client queues: clients_num, queues_num, queue_entries, skip_txq_wr_idx */
+		qcom,hw-fence-client-type-dpu = <6 2 128 0>;
+		qcom,hw-fence-client-type-ipe = <1 2 800 0>;
+		qcom,hw-fence-client-type-vpu = <1 2 800 0>;
+		qcom,hw-fence-client-type-ife0 = <1 1 128 1>;
+
 		/* haven doorbell specific */
 		hw_fence@0 {
 			compatible = "qcom,msm-hw-fence-db";
