@@ -14,7 +14,7 @@
 		qcom,hw-fence-ipc-ver = <0x20003>;
 
 		/* client queues: clients_num, queues_num, queue_entries, skip_txq_wr_idx */
-		qcom,hw-fence-client-type-dpu = <6 2 128 0>;
+		qcom,hw-fence-client-type-dpu = <6 2 128 1>;
 		qcom,hw-fence-client-type-ipe = <1 2 800 0>;
 		qcom,hw-fence-client-type-vpu = <1 2 800 0>;
 		qcom,hw-fence-client-type-ife0 = <1 1 128 1>;
