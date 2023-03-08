@@ -4,8 +4,11 @@ ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
 		pineapple-mm-cdp-overlay.dtbo \
 		pineapple-mm-mtp-overlay.dtbo \
 		pineapple-mm-qrd-overlay.dtbo \
+		pineapple-mm-qrd-sku2-overlay.dtbo \
 		pineapple-mm-mtp-nfc-overlay.dtbo \
-		pineapple-mm-cdp-nfc-overlay.dtbo
+		pineapple-mm-rcm-overlay.dtbo \
+		pineapple-mm-cdp-nfc-overlay.dtbo \
+		pineapple-mm-atp-overlay.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_KALAMA), y)
