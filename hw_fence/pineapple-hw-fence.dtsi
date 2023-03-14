@@ -19,6 +19,9 @@
 		qcom,hw-fence-client-type-vpu = <1 2 800 0>;
 		qcom,hw-fence-client-type-ife0 = <1 1 128 1>;
 
+		/* extra client queue properties */
+		qcom,hw-fence-client-type-ife0-extra = <20 28>;
+
 		/* haven doorbell specific */
 		hw_fence@0 {
 			compatible = "qcom,msm-hw-fence-db";

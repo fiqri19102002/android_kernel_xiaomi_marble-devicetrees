@@ -20,15 +20,21 @@ Optional properties:
                        from the registers.
 - qcom,hw-fence-client-type-[name]: A list of four u32 indicating <clients_num, queues_num,
 				  queue_entries, skip_txq_wr_idx>, where [name] specifies the client
-				  type these properties apply to. If provided, this overrides
-				  default values specified by the driver for some clients (e.g.
-				  dpu, gpu).
+				  type these properties apply to. If provided, all four u32 values
+				  must be provided, and these override default values specified by
+				  the driver for some clients (e.g. dpu, gpu).
 				  -- clients_num: number of clients for given client type
 				  -- queues_num: 1 queue (TxQ) or 2 queues (RxQ and TxQ)
 				  -- queue_entries: number of entries per client queue
 				  -- skip_txq_wr_idx: bool indicating whether tx queue wr_idx update
 						    is skipped within hw fence driver and
 						    hfi_header->tx_wm is used instead
+- qcom,hw-fence-client-type-[name]-extra: A list of two u32 indicating extra client queue
+                                        properties: <start_padding, end_padding>.
+				        -- start_padding: size of padding between queue table header
+					                and first queue header in bytes
+				        -- end_padding: size of padding between queue header(s) and
+						      first queue payload in bytes
 
 Example:
 	msm_hw_fence: qcom,hw-fence {
@@ -48,6 +54,9 @@ Example:
 		/* client queues: clients_num, queues_num, queue_entries, skip_txq_wr_idx */
 		qcom,hw-fence-client-type-dpu = <4 2 128 0>;
 		qcom,hw-fence-client-type-ife2 = <3 1 64 1>;
+
+		/* extra client queue properties */
+		qcom,hw-fence-client-type-ife2-extra = <20 28>;
 
 		/* haven doorbell specific */
 		hw_fence@0 {
