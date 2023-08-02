@@ -78,6 +78,13 @@ GDSC Oxili Regulators:
 - vdd-parent-supply:		Phandle for vdd parent regulator device node.
 - vdd-parent-min-corner:	Minimum voltage corner value to set vdd parent supply.
 
+Power Domains:
+- power-domains:		List of PM domain specifiers that reference each power-domain
+				used by the GPU
+- power-domain-names:		List of names that represent each of the specifiers in the
+				'power-domains' property. Includes 'gpu_cx' and 'gpu_gx' which
+				represent the power-domains for CX and GX GDSC, respectively.
+
 IOMMU Data:
 - iommu:			Phandle for the KGSL IOMMU device node
 
