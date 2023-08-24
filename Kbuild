@@ -58,6 +58,10 @@ dtbo-y += gpu/trinket-gpu.dtbo \
 		gpu/trinketp-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_HOLI), y)
+dtbo-y += gpu/holi-gpu.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_QCS405), y)
 dtbo-y += gpu/qcs405-gpu.dtbo
 endif
