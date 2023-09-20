@@ -16,6 +16,7 @@ Required properties:
 			Must include "qcom,adreno-gpu-gen7-3-0" for Parrot target.
 			Must include "qcom,adreno-gpu-gen7-9-0" for Pineapple target.
 			Must include "qcom,adreno-gpu-gen7-9-1" for Pineapple V2 target.
+			Must include "qcom,adreno-gpu-gen8-4-0" for Niobe target.
 - reg:			Specifies the list of register regions for the device.
 - reg-names:		Resource names used for the register regions specified
 			in reg.
