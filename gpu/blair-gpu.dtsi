@@ -32,6 +32,7 @@
 	nvmem-cell-names = "speed_bin", "gaming_bin";
 
 	qcom,chipid = <0x06010901>;
+	qcom,gpu-model = "Adreno619v2";
 
 	regulator-names = "vddcx", "vdd";
 	vddcx-supply = <&gpu_cx_gdsc>;
