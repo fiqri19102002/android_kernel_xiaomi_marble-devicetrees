@@ -71,7 +71,8 @@ dtbo-y += gpu/niobe-gpu.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CLIFFS), y)
-dtbo-y += gpu/cliffs-gpu.dtbo
+dtbo-y += gpu/cliffs-gpu.dtbo \
+		gpu/cliffs7-gpu.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
