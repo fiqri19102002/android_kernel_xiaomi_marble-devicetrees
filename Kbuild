@@ -79,6 +79,10 @@ ifeq ($(CONFIG_ARCH_BENGAL), y)
 dtbo-y += gpu/bengal-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_SDM670), y)
+dtbo-y += gpu/qcs605-gpu.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
