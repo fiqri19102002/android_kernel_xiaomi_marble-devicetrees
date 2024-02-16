@@ -12,7 +12,6 @@
 		interrupts = <0 177 IRQ_TYPE_LEVEL_HIGH>;
 		interrupt-names = "kgsl_3d0_irq";
 
-		qcom,id = <0>;
 		qcom,chipid = <0x06010000>;
 
 		qcom,initial-pwrlevel = <6>;
@@ -78,10 +77,6 @@
 		vddcx-supply = <&gpu_cx_gdsc>;
 		vdd-supply = <&gpu_gx_gdsc>;
 
-		/* CPU latency parameter */
-		qcom,pm-qos-active-latency = <422>;
-		qcom,pm-qos-wakeup-latency = <422>;
-
 		/* Enable context aware freq. scaling */
 		qcom,enable-ca-jump;
 		/* Context aware jump busy penalty in us */
@@ -91,22 +86,6 @@
 
 		nvmem-cells = <&gpu_speed_bin>, <&gpu_gaming_bin>;
 		nvmem-cell-names = "speed_bin", "gaming_bin";
-
-		qcom,gpu-cx-ipeak {
-			#address-cells = <1>;
-			#size-cells = <0>;
-			compatible = "qcom,gpu-cx-ipeak";
-
-			qcom,gpu-cx-ipeak@0 {
-				qcom,gpu-cx-ipeak = <&cx_ipeak_lm 10>;
-				qcom,gpu-cx-ipeak-freq = <950000000>;
-			};
-
-			qcom,gpu-cx-ipeak@1 {
-				qcom,gpu-cx-ipeak = <&cx_ipeak_lm 1>;
-				qcom,gpu-cx-ipeak-freq = <900000000>;
-			};
-		};
 
 		/* ZAP Shader memory */
 		zap-shader {
@@ -577,94 +556,12 @@
 
 
 &soc {
-	gpu_opp_table: gpu-opp-table {
-		compatible = "operating-points-v2";
-
-		opp-980000000 {
-			opp-hz = /bits/ 64 <980000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_TURBO_L1>;
-		};
-
-		opp-950000000 {
-			opp-hz = /bits/ 64 <950000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_TURBO_L1>;
-		};
-
-		opp-900000000 {
-			opp-hz = /bits/ 64 <900000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_TURBO>;
-		};
-
-		opp-820000000 {
-			opp-hz = /bits/ 64 <820000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_NOM_L1>;
-		};
-
-		opp-745000000 {
-			opp-hz = /bits/ 64 <745000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_NOM>;
-		};
-
-		opp-600000000 {
-			opp-hz = /bits/ 64 <600000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_SVS_L1>;
-		};
-
-		opp-465000000 {
-			opp-hz = /bits/ 64 <465000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_SVS>;
-		};
-
-		opp-320000000 {
-			opp-hz = /bits/ 64 <320000000>;
-			opp-microvolt = <RPMH_REGULATOR_LEVEL_LOW_SVS>;
-		};
-	};
-
-	gpu_bw_tbl: gpu-bw-tbl {
-		compatible = "operating-points-v2";
-
-		opp-0    { opp-hz = /bits/ 64 < 0 >;     }; /*  OFF */
-
-		opp-100  { opp-hz = /bits/ 64 < 762 >;   }; /*  1.100 MHz */
-
-		opp-200  { opp-hz = /bits/ 64 < 1525 >;  }; /*  2.200 MHz */
-
-		opp-300  { opp-hz = /bits/ 64 < 2288 >;  }; /*  3.300 MHz */
-
-		opp-451  { opp-hz = /bits/ 64 < 3440 >;  }; /*  4.451 MHz */
-
-		opp-547  { opp-hz = /bits/ 64 < 4173 >;  }; /*  5.547 MHz */
-
-		opp-681  { opp-hz = /bits/ 64 < 5195 >;  }; /*  6.681 MHz */
-
-		opp-768  { opp-hz = /bits/ 64 < 5859 >;  }; /*  7.768 MHz */
-
-		opp-1017 { opp-hz = /bits/ 64 < 7759 >;  }; /*  8.1017 MHz */
-
-		opp-1353 { opp-hz = /bits/ 64 < 10322 >; }; /*  9.1353 MHz */
-
-		opp-1555 { opp-hz = /bits/ 64 < 11863 >; }; /* 10.1555 MHz */
-
-		opp-1804 { opp-hz = /bits/ 64 < 13763 >; }; /* 11.1804 MHz */
-	};
-
-	gpubw: qcom,gpubw {
-		compatible = "qcom,devbw";
-		governor = "bw_vbif";
-		qcom,src-dst-ports = <26 512>;
-		operating-points-v2 = <&gpu_bw_tbl>;
-	};
-
 	kgsl_msm_iommu: qcom,kgsl-iommu@59a0000 {
 		compatible = "qcom,kgsl-smmu-v2";
 
 		reg = <0x59a0000 0x10000>;
-		qcom,protect = <0xa0000 0x10000>;
 
 		vddcx-supply = <&gpu_cx_gdsc>;
-		qcom,retention;
-		qcom,hyp_secure_alloc;
 
 		gfx3d_user: gfx3d_user {
 			compatible = "qcom,smmu-kgsl-cb";
