@@ -60,7 +60,7 @@
 			/* SVS_L0 */
 			qcom,gpu-pwrlevel@4 {
 				reg = <4>;
-				qcom,gpu-freq = <660000000>;
+				qcom,gpu-freq = <633000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_SVS_L0>;
 
 				qcom,bus-freq = <6>;
@@ -82,7 +82,7 @@
 			/* Low_SVS_L1 */
 			qcom,gpu-pwrlevel@6 {
 				reg = <6>;
-				qcom,gpu-freq = <524000000>;
+				qcom,gpu-freq = <495000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_L1>;
 
 				qcom,bus-freq = <3>;
@@ -104,7 +104,7 @@
 			/* Low_SVS_D0 */
 			qcom,gpu-pwrlevel@8 {
 				reg = <8>;
-				qcom,gpu-freq = <384000000>;
+				qcom,gpu-freq = <366000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_D0>;
 
 				qcom,bus-freq = <3>;
@@ -178,7 +178,7 @@
 			/* SVS_L0 */
 			qcom,gpu-pwrlevel@4 {
 				reg = <4>;
-				qcom,gpu-freq = <660000000>;
+				qcom,gpu-freq = <633000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_SVS_L0>;
 
 				qcom,bus-freq = <6>;
@@ -200,7 +200,7 @@
 			/* Low_SVS_L1 */
 			qcom,gpu-pwrlevel@6 {
 				reg = <6>;
-				qcom,gpu-freq = <524000000>;
+				qcom,gpu-freq = <495000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_L1>;
 
 				qcom,bus-freq = <3>;
@@ -222,7 +222,7 @@
 			/* Low_SVS_D0 */
 			qcom,gpu-pwrlevel@8 {
 				reg = <8>;
-				qcom,gpu-freq = <384000000>;
+				qcom,gpu-freq = <366000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_D0>;
 
 				qcom,bus-freq = <3>;
@@ -285,7 +285,7 @@
 			/* SVS_L0 */
 			qcom,gpu-pwrlevel@3 {
 				reg = <3>;
-				qcom,gpu-freq = <660000000>;
+				qcom,gpu-freq = <633000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_SVS_L0>;
 
 				qcom,bus-freq = <6>;
@@ -307,7 +307,7 @@
 			/* Low_SVS_L1 */
 			qcom,gpu-pwrlevel@5 {
 				reg = <5>;
-				qcom,gpu-freq = <524000000>;
+				qcom,gpu-freq = <495000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_L1>;
 
 				qcom,bus-freq = <3>;
@@ -329,7 +329,7 @@
 			/* Low_SVS_D0 */
 			qcom,gpu-pwrlevel@7 {
 				reg = <7>;
-				qcom,gpu-freq = <384000000>;
+				qcom,gpu-freq = <366000000>;
 				qcom,level = <RPMH_REGULATOR_LEVEL_LOW_SVS_D0>;
 
 				qcom,bus-freq = <3>;
