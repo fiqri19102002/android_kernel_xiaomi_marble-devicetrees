@@ -9,8 +9,8 @@
 	reg-names = "kgsl_3d0_reg_memory", "rscc", "cx_dbgc", "cx_misc",
 		"qdss_gfx";
 
-	interrupts = <0 300 IRQ_TYPE_LEVEL_HIGH>;
-	interrupt-names = "kgsl_3d0_irq";
+	interrupts = <0 300 IRQ_TYPE_LEVEL_HIGH>, <0 80 IRQ_TYPE_LEVEL_HIGH>;
+	interrupt-names = "kgsl_3d0_irq", "cx_host_irq";
 
 	clocks = <&gcc GCC_GPU_MEMNOC_GFX_CLK>,
 		<&gpucc GPU_CC_AHB_CLK>;
