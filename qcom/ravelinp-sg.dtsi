@@ -7,3 +7,7 @@
 	qcom,msm-id = <654 0x10000>;
 };
 
+&msm_gpu {
+	/delete-property/qcom,gpu-model;
+	qcom,gpu-model = "AdrenoA12v1";
+};
