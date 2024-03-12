@@ -82,7 +82,7 @@
 			tx-fifo-resize;
 			num-hc-interrupters = /bits/ 16 <3>;
 			dr_mode = "otg";
-			maximum-speed = "super-speed-plus";
+			maximum-speed = "high-speed";
 		};
 	};
 
