@@ -64,6 +64,15 @@
 	};
 };
 
+&pm8350b_gpios {
+	pm8350b_rear_tof_therm {
+		pm8350b_rear_tof_therm_default: pm8350b_rear_tof_therm_default {
+			pins = "gpio2";
+			bias-high-impedance;
+		};
+	};
+};
+
 &pm8350c_gpios {
 	lcd_backlight_ctrl {
 		lcd_backlight_ctrl_default: lcd_backlight_ctrl_default {
@@ -129,7 +138,7 @@
 
 &pmk8350_vadc {
 	pinctrl-names = "default";
-	pinctrl-0 = <&pm8350_rear_tof_therm_default>;
+	pinctrl-0 = <&pm8350b_rear_tof_therm_default>;
 
 	pm8350_msm_therm {
 		reg = <PM8350_ADC7_AMUX_THM1_100K_PU(1)>;
@@ -163,9 +172,9 @@
 		qcom,pre-scaling = <1 1>;
 	};
 
-	pm8350_rear_tof_therm {
+	pm8350b_rear_tof_therm {
 		reg = <PM8350_ADC7_AMUX_THM5_100K_PU(1)>;
-		label = "pm8350_rear_tof_therm";
+		label = "pm8350b_rear_tof_therm";
 		qcom,ratiometric;
 		qcom,hw-settle-time = <200>;
 		qcom,pre-scaling = <1 1>;
@@ -311,7 +320,7 @@
 		qcom,hw-settle-time-us = <200>;
 	};
 
-	pm8350_rear_tof_therm {
+	pm8350b_rear_tof_therm {
 		reg = <4>;
 		io-channels = <&pmk8350_vadc PM8350_ADC7_AMUX_THM5_100K_PU(1)>;
 		qcom,ratiometric;
