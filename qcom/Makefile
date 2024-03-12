@@ -321,7 +321,8 @@ dtbo-$(CONFIG_ARCH_CAPE) += cape-mtp-pm8008-overlay.dtbo \
 	ukee-mtp-nodisplay-pm8008-overlay.dtbo \
 	ukee-mtp-nodisplay-pm8010-overlay.dtbo \
 	ukee-qrd-pm8008-overlay.dtbo \
-	ukee-qrd-pm8010-overlay.dtbo
+	ukee-qrd-pm8010-overlay.dtbo \
+	marble-sm7475-pm8008-overlay.dtbo
 
 cape-mtp-pm8008-overlay.dtbo-base := cape.dtb cape-v2.dtb capep.dtb
 cape-mtp-120fps-pm8008-overlay.dtbo-base := cape.dtb cape-v2.dtb capep.dtb
@@ -355,6 +356,7 @@ ukee-mtp-nodisplay-pm8008-overlay.dtbo-base := ukee.dtb
 ukee-mtp-nodisplay-pm8010-overlay.dtbo-base := ukee.dtb
 ukee-qrd-pm8008-overlay.dtbo-base := ukee.dtb
 ukee-qrd-pm8010-overlay.dtbo-base := ukee.dtb
+marble-sm7475-pm8008-overlay.dtbo-base := ukee.dtb
 
 else
 dtb-$(CONFIG_ARCH_CAPE) += cape-mtp-pm8008.dtb \
