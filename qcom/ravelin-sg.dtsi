@@ -1,0 +1,8 @@
+#include "ravelin.dtsi"
+
+/ {
+
+	model = "Qualcomm Technologies, Inc. Ravelin SG";
+	compatible = "qcom,ravelin";
+	qcom,msm-id = <653 0x10000>;
+};
