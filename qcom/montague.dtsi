@@ -31,3 +31,11 @@
 		qcom,low-latency;
 	};
 };
+
+&pcie0 {
+
+/delete-property/ qcom,config-recovery;
+/delete-property/ qcom,drv-supported;
+
+};
+
