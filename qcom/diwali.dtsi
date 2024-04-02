@@ -48,14 +48,20 @@
 		hsuart0 = &qupv3_se7_4uart;
 		ufshc1 = &ufshc_mem; /* Embedded UFS Slot */
 		mmc1 = &sdhc_2; /* SDC2 SD card slot */
+		i2c0 = &qupv3_se0_i2c;
+		i2c1 = &qupv3_se2_i2c;
+		i2c2 = &qupv3_se4_i2c;
+		i2c3 = &qupv3_se9_i2c;
+		i2c4 = &qupv3_se12_i2c;
+		i2c5 = &qupv3_se13_i2c;
 	 };
 
 	sram: sram@17D09400 {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		compatible = "mmio-sram";
-		reg = <0x0 0x17D09400 0x0 0x200>;
-		ranges = <0x0 0x0 0x0 0x17D09400 0x0 0x200>;
+		reg = <0x0 0x17D09400 0x0 0x400>;
+		ranges = <0x0 0x0 0x0 0x17D09400 0x0 0x400>;
 
 		cpu_scp_lpri: scp-shmem@0 {
 			compatible = "arm,scp-shmem";
@@ -394,8 +400,6 @@
 	ramoops_mem: ramoops_region {
 		compatible = "ramoops";
 		alloc-ranges = <0x0 0x00000000 0xffffffff 0xffffffff>;
-		size = <0x0 0x200000>;
-		pmsg-size = <0x200000>;
 		mem-type = <2>;
 	};
 
@@ -1532,6 +1536,10 @@
 		compatible = "qcom,logbuf-vendor-hooks";
 	};
 
+	microdump_modem {
+		compatible = "qcom,microdump_modem";
+	};
+
 	mini_dump_node {
 		compatible = "qcom,minidump";
 	};
@@ -2340,6 +2348,7 @@
 		qcom,wlan;
 		tsens = "quiet-therm";
 		qcom,wlan-msa-fixed-region = <&wlan_fw_mem>;
+		use-nv-mac;
 		vdd-cx-mx-supply = <&S7B>;
 		qcom,vdd-cx-mx-config = <824000 1120000 0 0 1>;
 		vdd-1.8-xo-supply = <&S1B>;
@@ -3306,6 +3315,7 @@
 	fsa4480: fsa4480@42 {
 		compatible = "qcom,fsa4480-i2c";
 		reg = <0x42>;
+		qcom,use-power-supply = <2>;
 	};
 };
 
