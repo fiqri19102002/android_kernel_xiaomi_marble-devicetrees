@@ -62,6 +62,10 @@ ifeq ($(CONFIG_ARCH_HOLI), y)
 dtbo-y += gpu/holi-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_ANORAK), y)
+dtbo-y += gpu/anorak-gpu.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_QCS405), y)
 dtbo-y += gpu/qcs405-gpu.dtbo
 endif
