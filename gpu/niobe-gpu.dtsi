@@ -13,9 +13,11 @@
 	interrupt-names = "kgsl_3d0_irq", "cx_host_irq";
 
 	clocks = <&gcc GCC_GPU_MEMNOC_GFX_CLK>,
-		<&gpucc GPU_CC_AHB_CLK>;
+		<&gpucc GPU_CC_AHB_CLK>,
+		<&aoss_qmp QDSS_CLK>;
 	clock-names = "gcc_gpu_memnoc_gfx",
-			"gpu_cc_ahb";
+			"gpu_cc_ahb",
+			"apb_pclk";
 
 	qcom,min-access-length = <32>;
 
