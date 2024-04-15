@@ -67,9 +67,9 @@
 			<MHZ_TO_KBPS(768, 8)>,  /* index=7  */
 			<MHZ_TO_KBPS(1017, 8)>, /* index=8  */
 			<MHZ_TO_KBPS(1353, 8)>, /* index=9  */
-			<MHZ_TO_KBPS(1555, 8)>, /* index=10  */
-			<MHZ_TO_KBPS(1804, 8)>; /* index=11  */
-
+			<MHZ_TO_KBPS(1555, 8)>, /* index=10 */
+			<MHZ_TO_KBPS(1804, 8)>, /* index=11 */
+			<MHZ_TO_KBPS(2092, 8)>; /* index=12 */
 
 		/* GDSC regulator names */
 		regulator-names = "vddcx", "vdd";
@@ -184,9 +184,9 @@
 				qcom,gpu-pwrlevel@0 {
 					reg = <0>;
 					qcom,gpu-freq = <1050000000>;
-					qcom,bus-freq = <11>;
-					qcom,bus-min = <10>;
-					qcom,bus-max = <11>;
+					qcom,bus-freq = <12>;
+					qcom,bus-min = <11>;
+					qcom,bus-max = <12>;
 					qcom,level = <RPMH_REGULATOR_LEVEL_SUPER_TURBO>;
 				};
 
@@ -284,9 +284,9 @@
 				qcom,gpu-pwrlevel@0 {
 					reg = <0>;
 					qcom,gpu-freq = <1050000000>;
-					qcom,bus-freq = <11>;
-					qcom,bus-min = <10>;
-					qcom,bus-max = <11>;
+					qcom,bus-freq = <12>;
+					qcom,bus-min = <11>;
+					qcom,bus-max = <12>;
 					qcom,level = <RPMH_REGULATOR_LEVEL_SUPER_TURBO>;
 				};
 
