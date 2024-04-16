@@ -422,7 +422,13 @@ dtbo-$(CONFIG_ARCH_PARROT) += parrot-rumi-overlay.dtbo \
 	parrot-qrd-wcn6750-overlay.dtbo \
 	parrot-qrd-wcn6750-4gb-overlay.dtbo \
 	parrot-qrd-nopmi-overlay.dtbo	\
-	parrot-qrd-pm8350b-overlay.dtbo
+	parrot-qrd-pm8350b-overlay.dtbo \
+	parrot-idp-wcn6755-amoled-rcm-overlay.dtbo \
+	parrot-idp-wcn6755-overlay.dtbo \
+	parrot-qrd-wcn6755-overlay.dtbo \
+	parrot-idp-wcn6755-pm8350b-overlay.dtbo \
+	parrot-idp-wcn6755-nopmi-overlay.dtbo
+
 
 parrot-rumi-overlay.dtbo-base := parrot.dtb
 parrot-atp-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
@@ -444,6 +450,11 @@ parrot-qrd-wcn6750-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb par
 parrot-qrd-wcn6750-4gb-overlay.dtbo-base := parrot-4gb.dtb
 parrot-qrd-nopmi-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
 parrot-qrd-pm8350b-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
+parrot-idp-wcn6755-amoled-rcm-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
+parrot-idp-wcn6755-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
+parrot-qrd-wcn6755-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
+parrot-idp-wcn6755-pm8350b-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
+parrot-idp-wcn6755-nopmi-overlay.dtbo-base := parrot.dtb parrotp.dtb parrot-sg.dtb parrotp-sg.dtb
 else
 dtb-$(CONFIG_ARCH_PARROT) += parrot-rumi.dtb \
 	parrot-atp.dtb \
@@ -500,7 +511,27 @@ dtb-$(CONFIG_ARCH_PARROT) += parrot-rumi.dtb \
 	parrotp-sg-qrd.dtb \
 	parrotp-sg-qrd-wcn6750.dtb \
 	parrotp-sg-qrd-nopmi.dtb \
-	parrotp-sg-qrd-pm8350b.dtb
+	parrotp-sg-qrd-pm8350b.dtb \
+	parrot-idp-wcn6755-amoled-rcm.dtb \
+	parrot-idp-wcn6755.dtb \
+	parrot-qrd-wcn6755.dtb \
+	parrot-idp-wcn6755-pm8350b.dtb \
+	parrot-idp-wcn6755-nopmi.dtb \
+	parrot-sg-idp-wcn6755-nopmi.dtb \
+	parrot-sg-idp-wcn6755-amoled-rcm.dtb \
+	parrot-sg-qrd-wcn6755.dtb \
+	parrot-sg-idp-wcn6755.dtb \
+	parrot-sg-idp-wcn6755-pm8350b.dtb \
+	parrotp-sg-qrd-wcn6755.dtb \
+	parrotp-sg-idp-wcn6755-nopmi.dtb \
+	parrotp-sg-idp-wcn6755.dtb \
+	parrotp-sg-idp-wcn6755-pm8350b.dtb \
+	parrotp-sg-idp-wcn6755-amoled-rcm.dtb \
+	parrotp-idp-wcn6755-amoled-rcm.dtb \
+	parrotp-idp-wcn6755-pm8350b.dtb \
+	parrotp-idp-wcn6755-nopmi.dtb \
+	parrotp-idp-wcn6755.dtb \
+	parrotp-qrd-wcn6755.dtb
 endif
 
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
