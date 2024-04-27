@@ -61,6 +61,10 @@
 			qcom,vmax-mv = <1450>;
 			qcom,brake-mode = <BRAKE_CLOSE_LOOP>;
 			qcom,brake-pattern = /bits/ 8 <0xff 0x3f 0x1f>;
+			qcom,lra-f0-cal-count = <592>;
+			qcom,lra-f0-default = <170>;
+			qcom,lra-f0-max = <180>;
+			qcom,lra-f0-min = <160>;
 			qcom,lra-period-us = <5882>;
 			qcom,drv-sig-shape = <WF_SINE>;
 			qcom,brake-sig-shape = <WF_SINE>;
