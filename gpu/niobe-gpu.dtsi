@@ -12,10 +12,12 @@
 	interrupts = <0 300 IRQ_TYPE_LEVEL_HIGH>, <0 80 IRQ_TYPE_LEVEL_HIGH>;
 	interrupt-names = "kgsl_3d0_irq", "cx_host_irq";
 
-	clocks = <&gcc GCC_GPU_MEMNOC_GFX_CLK>,
+	clocks = <&gpucc GPU_CC_HLOS1_VOTE_GPU_SMMU_CLK>,
+		<&gcc GCC_GPU_MEMNOC_GFX_CLK>,
 		<&gpucc GPU_CC_AHB_CLK>,
 		<&aoss_qmp QDSS_CLK>;
-	clock-names = "gcc_gpu_memnoc_gfx",
+	clock-names = "gpu_cc_hlos1_vote_gpu_smmu",
+			"gcc_gpu_memnoc_gfx",
 			"gpu_cc_ahb",
 			"apb_pclk";
 
@@ -141,12 +143,13 @@
 		clocks = <&gpucc GPU_CC_CX_GMU_CLK>,
 			<&gpucc GPU_CC_CXO_CLK>,
 			<&gcc GCC_DDRSS_GPU_AXI_CLK>,
+			<&gpucc GPU_CC_HLOS1_VOTE_GPU_SMMU_CLK>,
 			<&gcc GCC_GPU_MEMNOC_GFX_CLK>,
 			<&gpucc GPU_CC_AHB_CLK>,
 			<&gpucc GPU_CC_HUB_CX_INT_CLK>;
 
 		clock-names = "gmu_clk", "cxo_clk", "axi_clk",
-			"memnoc_clk", "ahb_clk", "hub_clk";
+			"smmu_vote", "memnoc_clk", "ahb_clk", "hub_clk";
 
 		qcom,gmu-freq-table = <500000000 RPMH_REGULATOR_LEVEL_LOW_SVS>,
 					<650000000 RPMH_REGULATOR_LEVEL_SVS>;
