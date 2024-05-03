@@ -8,7 +8,8 @@
 #include "parrot-dsp.dtsi"
 
 / {
-	model = "Qualcomm Technologies, Inc. sun v1 SoC";
+	model = "Qualcomm Technologies, Inc. parrot v1 SoC";
 	compatible = "qcom,parrot";
+	qcom,msm-id = <537 0x10000>, <613 0x10000>, <663 0x10000>;
 	qcom,board-id = <0 0>;
 };
