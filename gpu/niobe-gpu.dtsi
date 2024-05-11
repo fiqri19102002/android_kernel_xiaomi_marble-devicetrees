@@ -159,5 +159,6 @@
 		qcom,iommu-dma = "disabled";
 
 		qcom,ipc-core = <0x00400000 0x140000>;
+		qcom,soccp-controller = <&soccp_pas>;
 	};
 };
