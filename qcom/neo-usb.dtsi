@@ -37,7 +37,6 @@
 
 		qcom,core-clk-rate = <133333333>;
 		qcom,core-clk-rate-hs = <66666667>;
-		qcom,hibernate-skip-thaw;
 
 		qcom,pm-qos-latency = <2>;
 
