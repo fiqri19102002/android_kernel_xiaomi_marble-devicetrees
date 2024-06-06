@@ -103,6 +103,10 @@ dtbo-y += gpu/ravelin-gpu.dtbo \
 		gpu/ravelinp-sg-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_SCUBA), y)
+dtbo-y += gpu/scuba-gpu.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
