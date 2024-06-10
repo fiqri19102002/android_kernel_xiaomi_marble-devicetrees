@@ -160,5 +160,7 @@
 
 		qcom,ipc-core = <0x00400000 0x140000>;
 		qcom,soccp-controller = <&soccp_pas>;
+
+		qcom,qmp = <&aoss_qmp>;
 	};
 };
