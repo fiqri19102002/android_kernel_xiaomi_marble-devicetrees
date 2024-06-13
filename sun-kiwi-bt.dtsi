@@ -47,8 +47,8 @@
 			qcom,bt-vdd-rfa1-supply   = <&S7I>;  /* BT RFA1.2 LDO */
 			qcom,bt-vdd-rfa2-supply   = <&S3G>;  /* BT RFA1.8 LDO */
 
-			qcom,bt-vdd18-aon-config  = <1800000 1800000 0 1 0>;
-			qcom,bt-vdd12-io-config   = <1200000 1200000 0 1 0>;
+			qcom,bt-vdd18-aon-config  = <1800000 1800000 30000 1 0>;
+			qcom,bt-vdd12-io-config   = <1200000 1200000 30000 1 0>;
 			qcom,bt-ant-ldo-config    = <1800000 1800000 0 1 0>;
 			qcom,bt-vdd-aon-config    = <916000 1100000 0 1 0>;
 			qcom,bt-vdd-rfaOp8-config = <916000 1100000 0 1 0>;
