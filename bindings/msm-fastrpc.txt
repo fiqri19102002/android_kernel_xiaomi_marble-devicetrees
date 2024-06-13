@@ -32,6 +32,9 @@ Subnode Required properties:
 - dma-coherent	:	A flag marking a context bank as I/O coherent
 - shared-cb		:	A value indicating how many fastrpc sessions can share a
 					context bank
+- pd-type		:	A value indicating remote subsystem proess type
+- alloc-size-range:	A pair values indicating the allocation size range
+						of context bank
 
 Example:
 	qcom,msm_fastrpc {

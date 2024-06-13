@@ -154,7 +154,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x4000000 0xFFFFFFFF>;
 		};
 
 		compute-cb@6 {
@@ -168,7 +169,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x4000000 0xFFFFFFFF>;
 		};
 
 		compute-cb@7 {
@@ -182,7 +184,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x1000000 0xFFFFFFFF>;
 		};
 
 		compute-cb@8 {
@@ -196,7 +199,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x1000000 0xFFFFFFFF>;
 		};
 
 		compute-cb@9 {
@@ -226,7 +230,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 
 		compute-cb@11 {
@@ -241,7 +246,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 
 		compute-cb@12 {
@@ -254,7 +260,8 @@
 			dma-coherent;
 			qcom,iova-best-fit;
 			qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
-			pd-type = <7>;	/* USERPD */
+			pd-type = <9>;	/* USER_UNSIGNEDPD_POOL */
+			alloc-size-range = <0x0 0xFFFFFFFF>;
 		};
 	};
 };

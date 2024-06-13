@@ -18,6 +18,10 @@ dtbo-y += sun/sun-dsp.dtbo
 endif
 endif
 
+ifeq ($(CONFIG_ARCH_MONACO), y)
+dtbo-y += monaco/monaco-dsp.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

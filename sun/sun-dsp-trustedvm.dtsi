@@ -13,6 +13,8 @@
 		memory-region = <&fastrpc_gen_pool_region>;
 		qcom,iommu-faults = "stall-disable", "HUPCF";
 		dma-coherent;
+		qcom,iova-best-fit;
+		qcom,iova-max-align-shift = <9>; /* Set MAX alignment to 2 MB*/
 		qrtr-gen-pool = <&fastrpc_compute_cb1>;
 		frpc-gen-addr-pool = <0x8000 0x9000>;
 		pd-type = <4>;	/* SECURE_STATICPD */
