@@ -89,9 +89,9 @@
 	pinctrl-0 = <&qupv3_se4_spi_active &qupv3_se4_spi_cs_active>;
 	pinctrl-1 = <&qupv3_se4_spi_sleep &qupv3_se4_spi_cs_sleep>;
 
-	m16t-touch@0 {
+	goodix-berlin@0 {
 		status = "ok";
-		compatible = "goodix,9916r-spi";
+		compatible = "goodix,gt9916S";
 		reg = <0>;
 		spi-max-frequency = <15000000>;
 		interrupt-parent = <&tlmm>;
@@ -112,9 +112,6 @@
 		goodix,panel-max-p = <4096>;
 		goodix,firmware-name = "goodix_firmware_TM.bin";
 		goodix,config-name = "goodix_cfg_group_TM.bin";
-		goodix,touch-expert-array = <2 3 2 2
-					     4 3 3 2
-					     3 3 4 2>;
 	};
 };
 
