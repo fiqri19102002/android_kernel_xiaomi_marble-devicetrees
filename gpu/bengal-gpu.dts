@@ -11,6 +11,8 @@
 #include <dt-bindings/spmi/spmi.h>
 
 #include "bengal-gpu.dtsi"
+#include "bengal-gpu-pwrlevels.dtsi"
+
 / {
 	model = "Qualcomm Technologies, Inc. Bengal SoC";
 	compatible = "qcom,bengal", "qcom,bengal-qrd",

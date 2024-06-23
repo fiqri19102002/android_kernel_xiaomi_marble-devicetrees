@@ -12,6 +12,7 @@
 #include <dt-bindings/soc/qcom,dcc_v2.h>
 
 #include "khaje-gpu.dtsi"
+#include "khaje-gpu-pwrlevels.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Khaje SoC";
