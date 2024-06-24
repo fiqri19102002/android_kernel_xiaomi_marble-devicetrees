@@ -696,6 +696,7 @@ dtbo-$(CONFIG_ARCH_ANORAK) += anorak-rumi-overlay.dtbo \
 		anorak-idp-hmt-overlay.dtbo \
 		anorak-qxr-hmt-ufs-ref-overlay.dtbo \
 		anorak-qxr-4kdisp-hmt-ufs-ref-overlay.dtbo \
+		anorakp-qxr-4kdisp-hmt-ufs-ref-overlay.dtbo \
 		anorak-qxr-hmt-overlay.dtbo \
 		anorak-idp-sd-overlay.dtbo \
 		anorak-idp-top-hmt-overlay.dtbo \
@@ -710,6 +711,7 @@ anorak-atp-overlay.dtbo-base := anorak.dtb anorakp.dtb
 anorak-idp-hmt-overlay.dtbo-base := anorak.dtb anorakp.dtb
 anorak-qxr-hmt-ufs-ref-overlay.dtbo-base := anorak.dtb anorakp.dtb
 anorak-qxr-4kdisp-hmt-ufs-ref-overlay.dtbo-base := anorak.dtb anorakp.dtb
+anorakp-qxr-4kdisp-hmt-ufs-ref-overlay.dtbo-base := anorak.dtb anorakp.dtb
 anorak-qxr-hmt-overlay.dtbo-base := anorak.dtb anorakp.dtb
 anorak-idp-sd-overlay.dtbo-base := anorak.dtb anorakp.dtb
 anorak-idp-top-hmt-overlay.dtbo-base := anorak.dtb anorakp.dtb
