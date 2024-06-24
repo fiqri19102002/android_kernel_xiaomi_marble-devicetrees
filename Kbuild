@@ -23,6 +23,10 @@ ifeq ($(CONFIG_ARCH_CLIFFS),y)
 dtbo-y += cliffs-ipa.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_PARROT),y)
+dtbo-y += parrot-ipa.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
