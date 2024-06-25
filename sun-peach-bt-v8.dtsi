@@ -68,7 +68,7 @@
 			qcom,bt-vdd12-io-config   = <1200000 1200000 30000 1 1>;
 			qcom,bt-ant-ldo-config    = <1800000 1860000 0 1 0>;
 			qcom,bt-vdd-aon-config    = <876000 1000000 0 1 0>;
-			qcom,bt-vdd-dig-config    = <876000 1000000 0 1 0>;
+			qcom,bt-vdd-dig-config    = <876000 1000000 0 1 1>;
 			qcom,bt-vdd-rfa0p75-config = <876000 1000000 0 1 0>;
 			qcom,bt-vdd-rfa1p8-config = <1860000 2000000 0 1 0>;
 			qcom,bt-vdd-rfa1p25-config  = <1312000 1340000 0 1 0>;
