@@ -93,6 +93,12 @@ dtbo-y += gpu/parrot-gpu.dtbo \
 		gpu/parrotp-sg-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_RAVELIN), y)
+dtbo-y += gpu/ravelin-gpu.dtbo \
+		gpu/ravelin-sg-gpu.dtbo \
+		gpu/ravelinp-sg-gpu.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
