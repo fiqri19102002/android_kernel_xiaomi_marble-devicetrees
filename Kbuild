@@ -18,7 +18,8 @@ ifeq ($(CONFIG_ARCH_PARROT),y)
 dtbo-y += nxp/parrot-nfc.dtbo \
           nxp/parrot-nfc-qrd.dtbo \
           nxp/parrot-nfc-idp.dtbo \
-          nxp/parrot-nfc-atp.dtbo
+          nxp/parrot-nfc-atp.dtbo \
+          nxp/parrot-nfc-idp-wcn6755.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN),y)
