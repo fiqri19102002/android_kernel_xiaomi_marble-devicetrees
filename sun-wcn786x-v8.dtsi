@@ -36,13 +36,13 @@
 };
 
 &soc {
-	bluetooth: wcn788x {
-			compatible = "qcom,wcn788x";
+	bluetooth: wcn786x {
+			compatible = "qcom,wcn786x";
 			nvmem-cells = <&fmd_set>;
 			nvmem-cell-names = "fmd_set";
 			clocks = <&rpmhcc RPMH_RF_CLK1>;
 			clock-names = "bt_rf_clk1";
-			qcom,wcn788x;
+			qcom,wcn786x;
 			pinctrl-names = "bt_en", "sw_ctrl", "bt_fmd_clk_en";
 			pinctrl-0 = <&bt_en>;
 			pinctrl-1 = <&cnss_bt_sw_ctrl>;

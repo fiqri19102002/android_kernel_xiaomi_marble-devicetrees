@@ -7,7 +7,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "sun-wcn788x-v8.dtsi"
+#include "sun-wcn786x-v8.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Sun SoCs";
