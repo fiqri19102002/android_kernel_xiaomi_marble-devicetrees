@@ -22,6 +22,23 @@
 		qcom,bt-vdd-pa-config = <3000000 3312000 1 0>;
 		qcom,bt-vdd-xtal-config = <1700000 1900000 1 0>;
 	};
+
+	slim_msm: slim@3340000 {
+		status =  "ok";
+		ngd@1 {
+			reg = <1>;
+			#address-cells = <1>;
+			#size-cells = <1>;
+			//slimbus child nodes
+			slimbus: btfmslim-driver {
+				compatible = "slim217,221";
+				reg = <1 0>;
+				qcom,btslim-address  = <0x0>; /* BT SLIM EP address*/
+				qcom,btslimtx-channels = <159 160>;
+				qcom,btslimrx-channels = <157 158>;
+			};
+		};
+	};
 };
 
 //uart instance
