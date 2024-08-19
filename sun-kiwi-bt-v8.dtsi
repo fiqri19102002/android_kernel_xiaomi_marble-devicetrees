@@ -38,8 +38,8 @@
 &soc {
 	bluetooth: bt_kiwi {
 			compatible = "qcom,kiwi";
-			nvmem-cells = <&fmd_set>;
-			nvmem-cell-names = "fmd_set";
+			nvmem-cells = <&fmd_set>, <&fmd_chg_pon>, <&fmd_cnt2_stop>;
+			nvmem-cell-names = "fmd_set", "fmd_chg_pon", "fmd_cnt2_stop";
 			clocks = <&rpmhcc RPMH_RF_CLK1>;
 			clock-names = "bt_rf_clk1";
 			pinctrl-names = "bt_en", "sw_ctrl", "bt_fmd_clk_en";
