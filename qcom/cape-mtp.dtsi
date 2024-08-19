@@ -102,8 +102,8 @@
 &qupv3_se13_spi {
 	status = "ok";
 
-	ir-spi@0 {
-		compatible = "ir-spi";
+	irled@0 {
+		compatible = "ir-spi-led";
 		reg = <0>;
 		spi-max-frequency = <19200000>;
 		status = "ok";
