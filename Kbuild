@@ -74,6 +74,10 @@ ifeq ($(CONFIG_ARCH_NIOBE), y)
 dtbo-y += gpu/niobe-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_PITTI), y)
+dtbo-y += gpu/pitti-gpu.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_CLIFFS), y)
 dtbo-y += gpu/cliffs-gpu.dtbo \
 		gpu/cliffs7-gpu.dtbo

@@ -23,7 +23,7 @@
 
 	qcom,min-access-length = <32>;
 
-	qcom,ubwc-mode = <4>;
+	qcom,ubwc-mode = <5>;
 
 	qcom,tzone-names = "gpuss-0", "gpuss-1", "gpuss-2", "gpuss-3",
 			"gpuss-4", "gpuss-5", "gpuss-6", "gpuss-7";
@@ -160,5 +160,7 @@
 
 		qcom,ipc-core = <0x00400000 0x140000>;
 		qcom,soccp-controller = <&soccp_pas>;
+
+		qcom,qmp = <&aoss_qmp>;
 	};
 };
