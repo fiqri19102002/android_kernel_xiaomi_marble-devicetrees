@@ -16,5 +16,5 @@
 	model = "Qualcomm Technologies, Inc. Ravelin";
 	compatible = "qcom,ravelin";
 	qcom,msm-id = <568 0x10000>, <581 0x10000>, <653 0x10000>;
-	qcom,board-id = <0 0>;
+	qcom,board-id = <0 0>, <34 0x601>, <0x1000B 0x600>;
 };
