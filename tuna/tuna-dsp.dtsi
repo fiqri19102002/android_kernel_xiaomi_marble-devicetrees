@@ -107,7 +107,7 @@
 		compute-cb@2 {
 			compatible = "qcom,fastrpc-compute-cb";
 			reg = <2>;
-			iommus = <&apps_smmu 0x0C02 0x0000>,
+			iommus = <&apps_smmu 0x0C02 0x0000>;
 			qcom,iommu-faults = "stall-disable", "HUPCF";
 			dma-coherent;
 			qcom,iova-best-fit;
