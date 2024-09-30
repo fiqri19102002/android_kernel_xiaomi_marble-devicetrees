@@ -66,6 +66,11 @@ ifeq ($(CONFIG_ARCH_ANORAK), y)
 dtbo-y += gpu/anorak-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_NEO), y)
+dtbo-y += gpu/neo-gpu.dtbo \
+		gpu/neo-luna-v2-gpu.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_QCS405), y)
 dtbo-y += gpu/qcs405-gpu.dtbo
 endif
