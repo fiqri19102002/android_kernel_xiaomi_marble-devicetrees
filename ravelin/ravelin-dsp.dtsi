@@ -31,6 +31,7 @@
 			qcom,iommu-faults = "stall-disable", "HUPCF";
 			dma-coherent;
 			qcom,nsessions = <4>;
+                        qcom,usershare = <1>;
 			pd-type = <3>;	/* SENSORS_STATICPD */
 		};
 
