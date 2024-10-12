@@ -58,7 +58,8 @@
 			qcom,bt-vdd18-aon-supply  = <&L3F>;   /* VDD1P8_AON */
 			qcom,bt-vdd12-io-supply   = <&L2F>;   /* VDD1P2_IO */
 			qcom,bt-ant-ldo-supply    = <&L6K>;   /* AV91C_VDD Extractor */
-			qcom,bt-vdd-dig-supply    = <&S5F>;   /* BT CX_MX LDO */
+			/* This buck is added for HW WAR */
+			qcom,bt-vdd-dig-supply    = <&S4D>;   /* BT CX_MX LDO */
 			qcom,bt-vdd-aon-supply    = <&S5F>;   /* RFA_CMN/AON */
 			qcom,bt-vdd-rfa0p75-supply = <&S5F>;  /* RFA_OP75 */
 			qcom,bt-vdd-rfa1p8-supply  = <&S3G>;  /* RFA_1P8 */
@@ -67,8 +68,8 @@
 			qcom,bt-vdd18-aon-config  = <1800000 1800000 30000 1 1>;
 			qcom,bt-vdd12-io-config   = <1200000 1200000 30000 1 1>;
 			qcom,bt-ant-ldo-config    = <1800000 1860000 0 1 0>;
-			qcom,bt-vdd-aon-config    = <876000 1000000 0 1 0>;
-			qcom,bt-vdd-dig-config    = <876000 1000000 0 1 1>;
+			qcom,bt-vdd-aon-config    = <876000 1000000 0 1 1>;
+			qcom,bt-vdd-dig-config    = <560000 1036000 0 1 0>;
 			qcom,bt-vdd-rfa0p75-config = <876000 1000000 0 1 0>;
 			qcom,bt-vdd-rfa1p8-config = <1860000 2000000 0 1 0>;
 			qcom,bt-vdd-rfa1p25-config  = <1312000 1340000 0 1 0>;
