@@ -2,6 +2,11 @@ ifeq ($(CONFIG_ARCH_PINEAPPLE),y)
 dtbo-y += pineapple-kiwi-bt.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_TUNA),y)
+dtbo-y += tuna-wcn7750-bt.dtbo
+dtbo-y += tuna-kiwi-bt.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_SUN), y)
 dtbo-y += sun-peach-bt.dtbo
 dtbo-y += sun-kiwi-bt.dtbo
