@@ -18,6 +18,14 @@ dtbo-y += sun/sun-dsp.dtbo
 endif
 endif
 
+ifeq ($(CONFIG_ARCH_TUNA), y)
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+dtbo-y += tuna/tuna-dsp-trustedvm.dtbo
+else
+dtbo-y += tuna/tuna-dsp.dtbo
+endif
+endif
+
 ifeq ($(CONFIG_ARCH_MONACO), y)
 dtbo-y += monaco/monaco-dsp.dtbo
 endif
