@@ -4,6 +4,7 @@ dtbo-y += nxp/sun-nfc.dtbo \
           nxp/sun-nfc-mtp.dtbo \
           nxp/sun-nfc-qrd.dtbo \
           nxp/tuna-nfc.dtbo \
+          nxp/kera-nfc.dtbo \
 
 dtbo-y += st/sun-nfc.dtbo \
           st/sun-nfc-mtp.dtbo \
@@ -14,7 +15,8 @@ dtbo-y += st/sun-nfc.dtbo \
           st/sun-nfc-atp.dtbo \
           st/sun-mtp-kiwi-v8.dtbo \
           st/sun-nfc-rcm.dtbo \
-          st/tuna-nfc.dtbo
+          st/tuna-nfc.dtbo \
+          st/kera-nfc.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_PARROT),y)
