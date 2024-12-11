@@ -78,7 +78,29 @@
 	};
 };
 
+&swr4 {
+	btswr_slave: btswr-slave {
+		compatible = "qcom,btfmswr_slave";
+		reg = <0x02 0x08170220>;
+	};
+};
+
 //uart instance
 &qupv3_se14_4uart {
 	status = "ok";
+};
+
+// FM changes
+&qupv3_se5_i2c {
+	status = "ok";
+	nq@64 {
+		compatible = "rtc6226";
+		reg = <0x64>;
+		fmint-gpio = <&tlmm 29 0>;
+		vdd-supply = <&L18B>;
+		rtc6226,vdd-supply-voltage = <2800000 2800000>;
+		rtc6226,vdd-load = <15000>;
+		vio-supply = <&S1B>;
+		rtc6226,vio-supply-voltage = <1856000 1856000>;
+	};
 };

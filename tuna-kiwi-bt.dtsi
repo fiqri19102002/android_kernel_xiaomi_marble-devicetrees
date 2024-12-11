@@ -71,6 +71,38 @@
 	};
 };
 
+&slim_msm {
+	status =  "ok";
+	ngd@1 {
+		reg = <1>;
+		#address-cells = <1>;
+		#size-cells = <1>;
+		//slimbus child nodes
+		slimbus: btfmslim-driver {
+			compatible = "slim217,221";
+			reg = <1 0>;
+			qcom,btslim-address  = <0x0>;
+			qcom,btslimtx-channels = <159 160>;
+			qcom,btslimrx-channels = <157 158>;
+		};
+	};
+};
+
+// FM changes
+&qupv3_se5_i2c {
+	status = "ok";
+	nq@64 {
+		compatible = "rtc6226";
+		reg = <0x64>;
+		fmint-gpio = <&tlmm 29 0>;
+		vdd-supply = <&L18B>;
+		rtc6226,vdd-supply-voltage = <2800000 2800000>;
+		rtc6226,vdd-load = <15000>;
+		vio-supply = <&S1B>;
+		rtc6226,vio-supply-voltage = <1856000 1856000>;
+	};
+};
+
 //uart instance
 &qupv3_se14_4uart {
 	status = "ok";
