@@ -55,12 +55,6 @@
 	thermal-message {
 		board-sensor = "VIRTUAL-SENSOR0";
 	};
-
-	xiaomi_touch {
-		compatible = "xiaomi-touch";
-		status = "ok";
-		touch,name = "xiaomi-touch";
-	};
 };
 
 &pm8350c_switch0 {
