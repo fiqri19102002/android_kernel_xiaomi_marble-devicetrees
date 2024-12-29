@@ -246,7 +246,7 @@
 	pinctrl-1 = <&mi_ts_spi_suspend &mi_ts_cs_suspend>;
 	m16t-touch@0 {
 		status = "ok";
-		compatible = "goodix,gt9916S";
+		compatible = "goodix,9916r-spi";
 		reg = <0>;
 		spi-max-frequency = <15000000>;
 		interrupt-parent = <&tlmm>;
@@ -271,6 +271,7 @@
 		goodix,firmware-nameb = "goodix_firmware_TM_Second.bin";
 		goodix,config-namea = "goodix_cfg_group_TM.bin";
 		goodix,config-nameb = "goodix_cfg_group_TM_Second.bin";
+		goodix,sleep-enable;
 	};
 };
 
