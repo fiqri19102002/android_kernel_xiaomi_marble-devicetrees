@@ -37,6 +37,12 @@ endif
 
 ifeq ($(CONFIG_ARCH_TUNA),y)
 dtbo-y += tuna-ipa.dtbo
+dtbo-y += tuna-smem-mailbox.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_KERA),y)
+dtbo-y += kera-ipa.dtbo
+dtbo-y += kera-smem-mailbox.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)
