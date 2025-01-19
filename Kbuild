@@ -19,19 +19,11 @@ endif
 endif
 
 ifeq ($(CONFIG_ARCH_TUNA), y)
-ifeq ($(CONFIG_ARCH_QTI_VM), y)
-dtbo-y += tuna/tuna-dsp-trustedvm.dtbo
-else
 dtbo-y += tuna/tuna-dsp.dtbo
-endif
 endif
 
 ifeq ($(CONFIG_ARCH_KERA), y)
-ifeq ($(CONFIG_ARCH_QTI_VM), y)
-dtbo-y += kera/kera-dsp-trustedvm.dtbo
-else
 dtbo-y += kera/kera-dsp.dtbo
-endif
 endif
 
 ifeq ($(CONFIG_ARCH_MONACO), y)
