@@ -1,5 +1,5 @@
 dtbo-y := synx/sun-synx.dtbo
-ifeq ($(CONFIG_ARCH_TUNA), y)
+ifneq (, $(filter y, $(CONFIG_ARCH_TUNA) $(CONFIG_ARCH_KERA)))
 	dtbo-y += synx/tuna-synx.dtbo
 endif
 #dtbo-y += sun-synx-cdp.dtbo
