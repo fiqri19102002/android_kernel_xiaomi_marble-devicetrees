@@ -25,6 +25,7 @@
 		compatible = "qcom,gpr";
 		qcom,glink-channels = "adsp_apps";
 		qcom,intents = <0x200 20>;
+		qcom,ch-sched-rt;
 		reg = <GPR_DOMAIN_ADSP>;
 
 		spf_core {
