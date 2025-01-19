@@ -15,6 +15,6 @@
 				 "qcom,tuna-cdp", "qcom,tunap-cdp", "qcom,cdp",
 				 "qcom,tuna-qrd", "qcom,tunap-qrd", "qcom,qrd",
 				 "qcom,tuna", "qcom,tunap";
-	qcom,msm-id = <681 0x10000>, <655 0x10000>;
-	qcom,board-id = <1 0>, <8 0>, <8 1>, <8 4>, <11 0>, <21 0>, <33 0>;
+	qcom,msm-id = <681 0x10000>, <655 0x10000>, <694 0x10000>;
+	qcom,board-id = <1 0>, <8 0>, <8 1>, <8 4>, <11 0>, <21 0>;
 };
