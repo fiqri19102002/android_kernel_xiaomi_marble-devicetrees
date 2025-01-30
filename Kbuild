@@ -43,6 +43,10 @@ ifeq ($(CONFIG_ARCH_HOLI), y)
 dtbo-y += holi-vidc.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_VIENNA), y)
+dtbo-y += vienna-vidc.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
