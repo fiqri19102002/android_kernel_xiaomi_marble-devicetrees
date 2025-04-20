@@ -29,10 +29,7 @@ dtbo-y += nxp/parrot-nfc.dtbo \
 endif
 
 ifeq ($(CONFIG_ARCH_RAVELIN),y)
-dtbo-y += nxp/ravelin-nfc.dtbo \
-          nxp/ravelin-nfc-qrd.dtbo \
-          nxp/ravelin-nfc-idp.dtbo \
-          nxp/ravelin-nfc-atp.dtbo
+dtbo-y += nxp/ravelin-nfc.dtbo
 endif
 
 
