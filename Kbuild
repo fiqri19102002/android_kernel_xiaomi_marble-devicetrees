@@ -112,6 +112,10 @@ ifeq ($(CONFIG_ARCH_SCUBA), y)
 dtbo-y += gpu/scuba-gpu.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_SM6150), y)
+dtbo-y += gpu/sm6150-gpu.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
