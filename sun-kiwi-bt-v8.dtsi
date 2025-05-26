@@ -14,7 +14,7 @@
 		input-disable;
 		output-enable;
 		bias-disable;
-		power-source = <1>;
+		power-source = <2>;
 	};
 	bt_fmd_clk_en: bt_fmd_clk_en {
 		pins = "gpio6";
@@ -22,7 +22,7 @@
 		input-enable;
 		output-disable;
 		bias-disable;
-		power-source = <1>;
+		power-source = <2>;
 	};
 };
 
