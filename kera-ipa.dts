@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 /dts-v1/;
@@ -11,7 +11,7 @@
 #include <dt-bindings/interconnect/qcom,kera.h>
 #include <dt-bindings/clock/qcom,gcc-kera.h>
 #include <dt-bindings/clock/qcom,rpmh.h>
-#include "tuna-ipa.dtsi"
+#include "kera-ipa.dtsi"
 
 / {
 	model = "Qualcomm Technologies, Inc. Kera SoC";
