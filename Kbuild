@@ -23,6 +23,7 @@ dtbo-$(CONFIG_ARCH_PARROT) += parrot-audio.dtbo \
                  parrot-audio-idp-wcn6750-amoled-rcm.dtbo \
                  parrot-audio-idp-wcn6755-amoled-rcm.dtbo \
                  parrot-audio-idp-wcn6755.dtbo \
+                 parrot-lite-audio-idp.dtbo \
                  parrot-audio-qrd.dtbo \
                  parrot-audio-qrd-wcn6750.dtbo \
                  parrot-audio-qrd-wcn6755.dts \
