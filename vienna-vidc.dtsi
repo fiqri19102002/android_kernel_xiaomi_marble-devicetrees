@@ -52,50 +52,71 @@
 					1000 6500000>;
 
 		/* MMUs */
-		non_secure_cb {
+		iommu_region_partition: iommu_region_partition {
+			/* These IOVA regions are unique per context bank */
+			iommu-addresses = <&non_secure_cb 0x0 0x70800000>,
+						<&non_secure_cb 0xe0000000 0x20000000>,
+				<&secure_bitstream_cb 0x0 0x4b000000>,
+						<&secure_bitstream_cb 0x70800000 0x8f800000>,
+				<&secure_pixel_cb 0x0 0x25800000>,
+						<&secure_pixel_cb 0x4b000000 0xb5000000>,
+				<&secure_non_pixel_cb 0x0 0x1000000>,
+						<&secure_non_pixel_cb 0x25800000 0xda800000>;
+		};
+
+		non_secure_cb:non_secure_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_ns";
 			iommus =
 				<&apps_smmu 0x980 0x20>;
-			qcom,iommu-dma-addr-pool = <0x70800000 0x6f800000>;
+			memory-region = <&iommu_region_partition>;
 			qcom,iommu-faults = "non-fatal";
 			virtual-addr-pool = <0x70800000 0x6f800000>;
+			qcom,iova-best-fit;
+			/* log2 of desired alignment (1MB) - log2 of PAGE_SIZE; (20 - 12 = 8) */
+			qcom,iova-max-align-shift = <8>; /* 1 MB */
 			dma-coherent;
 		};
 
-		secure_bitstream_cb {
+		secure_bitstream_cb:secure_bitstream_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_sec_bitstream";
 			iommus =
 				<&apps_smmu 0x981 0x04>;
-			qcom,iommu-dma-addr-pool = <0x4b000000 0x25800000>;
+			memory-region = <&iommu_region_partition>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-vmid = <0x9>; /*VMID_CP_BITSTREAM*/
 			virtual-addr-pool = <0x4b000000 0x25800000>;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <8>; /* 1 MB */
 			qcom,secure-context-bank;
 		};
 
-		secure_pixel_cb {
+		secure_pixel_cb:secure_pixel_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_sec_pixel";
 			iommus =
 				<&apps_smmu 0x983 0x0>;
-			qcom,iommu-dma-addr-pool = <0x25800000 0x25800000>;
+			memory-region = <&iommu_region_partition>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-vmid = <0xA>; /*VMID_CP_PIXEL*/
 			virtual-addr-pool = <0x25800000 0x25800000>;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <8>; /* 1 MB */
 			qcom,secure-context-bank;
 		};
 
-		secure_non_pixel_cb {
+		secure_non_pixel_cb:secure_non_pixel_cb {
 			compatible = "qcom,msm-vidc,context-bank";
 			label = "venus_sec_non_pixel";
 			iommus =
 				<&apps_smmu 0x984 0x20>;
-			qcom,iommu-dma-addr-pool = <0x1000000 0x24800000>;
+			memory-region = <&iommu_region_partition>;
 			qcom,iommu-faults = "non-fatal";
 			qcom,iommu-vmid = <0xB>; /*VMID_CP_NON_PIXEL*/
-			virtual-addr-pool = <0x1000000 0x24800000>;
+			virtual-addr-pool = <0x01000000 0x24800000>;
+			qcom,iova-best-fit;
+			qcom,iova-max-align-shift = <8>; /* 1 MB */
 			qcom,secure-context-bank;
 		};
 	};
