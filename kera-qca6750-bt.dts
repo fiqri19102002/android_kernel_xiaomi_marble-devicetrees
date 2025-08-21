@@ -14,7 +14,7 @@
 				"qcom,kera-cdp", "qcom,cdp", "qcom,kera-mtp",
 				"qcom,mtp", "qcom,kera-rcm", "qcom,rcm",
 				"qcom,kerap-qmb", "qcom,kerap-qna";
-	qcom,msm-id = <686 0x10000>, <659 0x10000>, <731 0x10000>, <732 0x10000>, <720 0x10000>, <721 0x10000>;
+	qcom,msm-id = <686 0x10000>, <659 0x10000>, <731 0x10000>, <732 0x10000>, <720 0x10000>;
 	qcom,board-id = <0x000021 0>, <0x010001 0>, <0x020001 0>,
 					<0x030001 0>, <0x040001 0>, <0x010008 0>,
 					<0x020008 0>, <0x030008 0>, <0x010015 0>,
