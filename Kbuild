@@ -9,6 +9,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += kera-qca6750-bt.dtbo
+dtbo-y += kera-qca6750-bt-qmb.dtbo
 dtbo-y += kera-wcn7750-bt.dtbo
 endif
 
@@ -33,4 +34,3 @@ endif
 always-y        := $(dtb-y) $(dtbo-y)
 subdir-y        := $(dts-dirs)
 clean-files     := *.dtb *.dtbo
-

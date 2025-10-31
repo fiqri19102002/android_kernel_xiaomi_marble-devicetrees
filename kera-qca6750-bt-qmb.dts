@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * Module-specific DTS for qcom,kerap-qmb
+ */
+
+/dts-v1/;
+/plugin/;
+
+#include "kera-qca6750-bt.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Kera QMB";
+	compatible = "qcom,kerap-qmb";
+	qcom,msm-id = <720 0x10000>;
+	qcom,board-id = <0x010001 1>;
+};
+
+// FM changes - not needed for qmb module, completely remove FM device
+&qupv3_se4_i2c {
+	status = "disabled";
+	/delete-node/ nq@64;
+};
