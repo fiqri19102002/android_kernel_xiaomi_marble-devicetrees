@@ -183,13 +183,13 @@
 
 			mi,mdss-dsi-doze-hbm-command = [
 				15 00 00 00 00 00 02 6D 01
-				05 00 00 00 00 00 01 39
+				39 00 00 00 00 00 03 51 00 F5
 			];
 			mi,mdss-dsi-doze-hbm-command-state = "dsi_hs_mode";
 
 			mi,mdss-dsi-doze-lbm-command = [
 				15 00 00 00 00 00 02 6D 00
-				05 00 00 00 00 00 01 39
+				39 00 00 00 00 00 03 51 00 14
 			];
 			mi,mdss-dsi-doze-lbm-command-state = "dsi_hs_mode";
 
@@ -204,23 +204,24 @@
 			mi,mdss-dsi-doze-lbm-nolp-command-state = "dsi_hs_mode";
 
 			qcom,mdss-dsi-nolp-command = [
-				05 00 00 00 00 00 01 38
+				39 00 00 40 00 00 03 51 00 00
+				39 00 00 00 00 00 02 38 00
 			];
 			qcom,mdss-dsi-nolp-command-state = "dsi_hs_mode";
 			qcom,mdss-dsi-nolp-command-update = <0x51 0 2>;
 
 			mi,mdss-dsi-fps-120-gamma-command = [
-				39 00 00 00 00 00 02 6C 02
+				39 00 00 10 00 00 02 6C 02
 			];
 			mi,mdss-dsi-fps-120-gamma-command-state = "dsi_hs_mode";
 
 			mi,mdss-dsi-fps-90-gamma-command = [
-				39 00 00 00 00 00 02 6C 01
+				39 00 00 10 00 00 02 6C 01
 			];
 			mi,mdss-dsi-fps-90-gamma-command-state = "dsi_hs_mode";
 
 			mi,mdss-dsi-fps-60-gamma-command = [
-				39 00 00 00 00 00 02 6C 00
+				39 00 00 10 00 00 02 6C 00
 			];
 			mi,mdss-dsi-fps-60-gamma-command-state = "dsi_hs_mode";
 		};
