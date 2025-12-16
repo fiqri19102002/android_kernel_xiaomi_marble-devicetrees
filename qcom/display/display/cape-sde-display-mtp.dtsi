@@ -110,6 +110,28 @@
 	qcom,platform-sec-reset-gpio = <&tlmm 4 0>;
 };
 
+&dsi_m16t_36_02_0a_dsc_vid {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_0a_m16t>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <4>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-brightness-init-level = <307>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
+};
+
+&dsi_m16t_36_0d_0b_dsc_vid {
+	qcom,panel-supply-entries = <&dsi_panel_pwr_supply_0b_m16t>;
+	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
+	qcom,mdss-dsi-bl-min-level = <4>;
+	qcom,mdss-dsi-bl-max-level = <4095>;
+	qcom,mdss-brightness-max-level = <4095>;
+	qcom,mdss-brightness-init-level = <307>;
+	qcom,mdss-dsi-bl-inverted-dbv;
+	qcom,platform-reset-gpio = <&tlmm 0 0>;
+};
+
 &qupv3_se4_spi {
 	focaltech@0 {
 		panel = <&dsi_r66451_amoled_cmd_cphy
@@ -118,6 +140,11 @@
 			&dsi_r66451_amoled_video_cphy
 			&dsi_r66451_amoled_120hz_cmd_cphy
 			&dsi_r66451_amoled_120hz_video_cphy>;
+	};
+
+	m16t-touch@0 {
+		panel = <&dsi_m16t_36_02_0a_dsc_vid
+			&dsi_m16t_36_0d_0b_dsc_vid>;
 	};
 };
 
@@ -129,7 +156,27 @@
 					&dsi_r66451_amoled_144hz_video_cphy
 					&dsi_r66451_amoled_video_cphy
 					&dsi_r66451_amoled_120hz_cmd_cphy
-					&dsi_r66451_amoled_120hz_video_cphy>;
+					&dsi_r66451_amoled_120hz_video_cphy
+					&dsi_m16t_36_02_0a_dsc_vid
+					&dsi_m16t_36_0d_0b_dsc_vid>;
 		};
+	};
+};
+
+&soc {
+	thermal-message {
+		board-sensor = "VIRTUAL-SENSOR0";
+	};
+
+	thermal-screen {
+		panel = <&dsi_m16t_36_02_0a_dsc_vid &dsi_m16t_36_0d_0b_dsc_vid>;
+	};
+
+	charge-screen {
+		panel = <&dsi_m16t_36_02_0a_dsc_vid &dsi_m16t_36_0d_0b_dsc_vid>;
+	};
+
+	fingerprint-screen {
+		panel = <&dsi_m16t_36_02_0a_dsc_vid &dsi_m16t_36_0d_0b_dsc_vid>;
 	};
 };

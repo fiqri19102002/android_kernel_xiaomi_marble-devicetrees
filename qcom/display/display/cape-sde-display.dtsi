@@ -23,8 +23,8 @@
 		label = "wb_display";
 	};
 
-	disp_rdump_memory: disp_rdump_region@e1000000 {
-		reg = <0xb8000000 0x00800000>;
+	disp_rdump_memory: disp_rdump_region@b8000000 {
+		reg = <0xb8000000 0x01400000>;
 		label = "disp_rdump_region";
 	};
 };
@@ -61,6 +61,7 @@
 			"mdp_core_clk";
 
 	vddio-supply = <&L12C>;
+	vddd-supply = <&L1D>;
 	vci-supply = <&L13C>;
 	extvdd-supply = <&L1D>;
 };
@@ -95,7 +96,7 @@
 };
 
 &mdss_mdp {
-	connectors = <&sde_dsi &sde_dsi1 &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_rscc &sde_dp>;
+	connectors = <&sde_dsi &smmu_sde_unsec &smmu_sde_sec &sde_wb &sde_rscc>;
 };
 
 &dsi_r66451_amoled_cmd {
