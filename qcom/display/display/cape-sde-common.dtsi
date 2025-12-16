@@ -328,6 +328,7 @@
 		interrupt-parent = <&mdss_mdp>;
 		interrupts = <4 0>;
 		qcom,split-link-supported;
+		mi,support-max-hs-timer;
 
 		qcom,ctrl-supply-entries {
 			#address-cells = <1>;
