@@ -176,6 +176,11 @@
 			];
 			mi,mdss-dsi-flat-mode-off-command-state = "dsi_hs_mode";
 
+			mi,mdss-dsi-aod-enter-command = [
+				39 00 00 00 00 00 02 39 00
+			];
+			mi,mdss-dsi-aod-enter-command-state = "dsi_hs_mode";
+
 			mi,mdss-dsi-aod-exit-command = [
 				05 00 00 00 21 00 01 38
 			];
