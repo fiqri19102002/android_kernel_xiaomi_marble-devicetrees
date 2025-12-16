@@ -5,7 +5,7 @@
 #include "waipio-lpi.dtsi"
 
 &lpass_cdc {
-	qcom,num-macros = <4>;
+	qcom,num-macros = <3>;
 	qcom,lpass-cdc-version = <6>;
 	#address-cells = <1>;
 	#size-cells = <1>;
@@ -164,6 +164,7 @@
 	};
 
 	wsa_macro: wsa-macro@3240000 {
+		status = "disabled";
 		compatible = "qcom,lpass-cdc-wsa-macro";
 		reg = <0x3240000 0x0>;
 		qcom,wsa-swr-gpios = <&wsa_swr_gpios>;
@@ -329,10 +330,10 @@
 		qcom,cdc-vdd-mic-bias-voltage = <3296000 3296000>;
 		qcom,cdc-vdd-mic-bias-current = <30000>;
 
-		qcom,cdc-micbias1-mv = <1800>;
-		qcom,cdc-micbias2-mv = <1800>;
-		qcom,cdc-micbias3-mv = <1800>;
-		qcom,cdc-micbias4-mv = <1800>;
+		qcom,cdc-micbias1-mv = <2750>;
+		qcom,cdc-micbias2-mv = <2750>;
+		qcom,cdc-micbias3-mv = <2750>;
+		qcom,cdc-micbias4-mv = <2750>;
 
 		qcom,cdc-static-supplies = "cdc-vdd-rxtx",
 					   "cdc-vddio",
@@ -348,7 +349,8 @@
 		qcom,msm-mi2s-master = <1>, <1>, <1>, <1>, <1>, <1>;
 		qcom,mi2s-tdm-is-hw-vote-needed = <1>, <0>, <1>, <0>, <0>, <0>;
 		qcom,wcn-bt = <1>;
-		qcom,ext-disp-audio-rx = <1>;
+		qcom,ext-disp-audio-rx = <0>;
+		qcom,tdm-audio-intf = <1>;
 		qcom,tdm-max-slots = <8>;
 		qcom,tdm-clk-attribute = <0x1>, <0x1>, <0x1>, <0x1>, <0x1>, <0x1>;
 		qcom,mi2s-clk-attribute = <0x1>, <0x1>, <0x1>, <0x1>, <0x1>, <0x1>;
@@ -374,26 +376,20 @@
 			"VA AMIC5", "Analog Mic5",
 			"VA AMIC5", "VA MIC BIAS4",
 			"TX DMIC0", "Digital Mic0",
-			"TX DMIC0", "MIC BIAS3",
+			"Digital Mic0", "MIC BIAS3",
 			"TX DMIC1", "Digital Mic1",
-			"TX DMIC1", "MIC BIAS3",
+			"Digital Mic1", "MIC BIAS3",
 			"TX DMIC2", "Digital Mic2",
-			"TX DMIC2", "MIC BIAS1",
+			"Digital Mic2", "MIC BIAS1",
 			"TX DMIC3", "Digital Mic3",
-			"TX DMIC3", "MIC BIAS1",
+			"Digital Mic3", "MIC BIAS1",
 			"IN1_HPHL", "HPHL_OUT",
 			"IN2_HPHR", "HPHR_OUT",
 			"IN3_AUX", "AUX_OUT",
-			"HAP_IN", "PCM_OUT",
-			"WSA SRC0_INP", "SRC0",
-			"WSA_TX DEC0_INP", "TX DEC0 MUX",
-			"WSA_TX DEC1_INP", "TX DEC1 MUX",
 			"RX_TX DEC0_INP", "TX DEC0 MUX",
 			"RX_TX DEC1_INP", "TX DEC1 MUX",
 			"RX_TX DEC2_INP", "TX DEC2 MUX",
 			"RX_TX DEC3_INP", "TX DEC3 MUX",
-			"SpkrLeft IN", "WSA_SPK1 OUT",
-			"SpkrRight IN", "WSA_SPK2 OUT",
 			"TX SWR_INPUT", "WCD_TX_OUTPUT",
 			"VA SWR_INPUT", "VA_SWR_CLK",
 			"VA SWR_INPUT", "WCD_TX_OUTPUT",
@@ -404,10 +400,10 @@
 			"VA DMIC1", "Digital Mic1",
 			"VA DMIC2", "Digital Mic2",
 			"VA DMIC3", "Digital Mic3",
-			"VA DMIC0", "VA MIC BIAS3",
-			"VA DMIC1", "VA MIC BIAS3",
-			"VA DMIC2", "VA MIC BIAS1",
-			"VA DMIC3", "VA MIC BIAS1";
+			"Digital Mic0", "VA MIC BIAS3",
+			"Digital Mic1", "VA MIC BIAS3",
+			"Digital Mic2", "VA MIC BIAS1",
+			"Digital Mic3", "VA MIC BIAS1";
 		qcom,msm-mbhc-usbc-audio-supported = <0>;
 		qcom,msm-mbhc-hphl-swh = <1>;
 		qcom,msm-mbhc-gnd-swh = <1>;
@@ -422,7 +418,7 @@
 		asoc-codec-names = "msm-stub-codec.1", "lpass-cdc",
 				   "wcd938x_codec", "swr-haptics",
 			   	"wsa-codec1", "wsa-codec2";
-		qcom,wsa-max-devs = <2>;
+		qcom,wsa-max-devs = <0>;
 		qcom,msm_audio_ssr_devs = <&audio_gpr>, <&lpi_tlmm>,
 				  <&lpass_cdc>;
 		qcom,upd_backends_used = "wcd";
@@ -441,7 +437,19 @@
 		#gpio-cells = <0>;
 	};
 
+	cdc_tert_tdm_gpios: tert_tdm_pinctrl {
+		status= "ok";
+		compatible = "qcom,msm-cdc-pinctrl";
+		pinctrl-names = "aud_active", "aud_sleep";
+		pinctrl-0 = <&tert_tdm_clk_active &tert_tdm_ws_active
+				&tert_tdm_din_active &tert_tdm_dout_active>;
+		pinctrl-1 = <&tert_tdm_clk_sleep &tert_tdm_ws_sleep
+				&tert_tdm_din_sleep &tert_tdm_dout_sleep>;
+		#gpio-cells = <0>;
+	};
+
 	wsa_swr_gpios: wsa_swr_clk_data_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa_swr_clk_active &wsa_swr_data_active>;
@@ -451,6 +459,7 @@
 	};
 
 	wsa2_swr_gpios: wsa2_swr_clk_data_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa2_swr_clk_active &wsa2_swr_data_active>;
@@ -482,6 +491,7 @@
 	};
 
 	cdc_dmic01_gpios: cdc_dmic01_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic01_clk_active &cdc_dmic01_data_active>;
@@ -491,6 +501,7 @@
 	};
 
 	cdc_dmic23_gpios: cdc_dmic23_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic23_clk_active &cdc_dmic23_data_active>;
@@ -500,6 +511,7 @@
 	};
 
 	cdc_dmic45_gpios: cdc_dmic45_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic45_clk_active &cdc_dmic45_data_active>;
@@ -509,6 +521,7 @@
 	};
 
 	cdc_dmic67_gpios: cdc_dmic67_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic67_clk_active &cdc_dmic67_data_active>;
@@ -524,6 +537,7 @@
 
 &soc {
 	wsa_spkr_en1: wsa_spkr_en1_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_1_sd_n_active>;
@@ -531,6 +545,7 @@
 	};
 
 	wsa_spkr_en2: wsa_spkr_en2_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_2_sd_n_active>;
@@ -538,6 +553,7 @@
 	};
 
 	wsa2_spkr_en1: wsa2_spkr_en1_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr2_1_sd_n_active>;
@@ -545,6 +561,7 @@
 	};
 
 	wsa2_spkr_en2: wsa2_spkr_en2_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr2_2_sd_n_active>;
