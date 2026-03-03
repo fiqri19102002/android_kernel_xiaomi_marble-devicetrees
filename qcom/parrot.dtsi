@@ -33,6 +33,10 @@
 		ufshc1 = &ufshc_mem; /* Embedded UFS Slot */
 		serial0 = &qupv3_se3_2uart;
 		hsuart0 = &qupv3_se11_4uart;
+		i2c0 = &qupv3_se0_i2c;
+		i2c1 = &qupv3_se2_i2c;
+		i2c2 = &qupv3_se6_i2c;
+		i2c3 = &qupv3_se9_i2c;
 	};
 
 	chosen: chosen {
