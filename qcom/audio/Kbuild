@@ -28,7 +28,7 @@ dtbo-$(CONFIG_ARCH_PARROT) += parrot-audio.dtbo \
                  parrot-lite-audio-qrd.dtbo \
                  parrot-audio-qrd.dtbo \
                  parrot-audio-qrd-wcn6750.dtbo \
-                 parrot-audio-qrd-wcn6755.dts \
+                 parrot-audio-qrd-wcn6755.dtbo \
                  parrot-audio-atp.dtbo
 
 dtbo-$(CONFIG_ARCH_RAVELIN) += ravelin-audio.dtbo \
