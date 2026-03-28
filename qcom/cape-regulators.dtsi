@@ -370,6 +370,25 @@
 		};
 	};
 
+	rpmh-regulator-ldoc1 {
+		compatible = "qcom,rpmh-vrm-regulator";
+		qcom,resource-name = "ldoc1";
+		qcom,regulator-type = "pmic5-ldo";
+		qcom,supported-modes =
+			<RPMH_REGULATOR_MODE_LPM
+			RPMH_REGULATOR_MODE_HPM>;
+		qcom,mode-threshold-currents = <0 10000>;
+		L1C:
+		pm8350c_l1: regulator-pm8350c-l1 {
+			regulator-name = "pm8350c_l1";
+			qcom,set = <RPMH_REGULATOR_SET_ALL>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1800000>;
+			qcom,init-voltage = <1800000>;
+			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
+		};
+	};
+
 	rpmh-regulator-ldoc2 {
 		compatible = "qcom,rpmh-vrm-regulator";
 		qcom,resource-name = "ldoc2";
@@ -383,7 +402,7 @@
 			regulator-name = "pm8350c_l2";
 			qcom,set = <RPMH_REGULATOR_SET_ALL>;
 			regulator-min-microvolt = <1800000>;
-			regulator-max-microvolt = <1980000>;
+			regulator-max-microvolt = <1800000>;
 			qcom,init-voltage = <1800000>;
 			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
 		};
@@ -458,9 +477,9 @@
 		pm8350c_l6: regulator-pm8350c-l6 {
 			regulator-name = "pm8350c_l6";
 			qcom,set = <RPMH_REGULATOR_SET_ALL>;
-			regulator-min-microvolt = <1800000>;
-			regulator-max-microvolt = <3544000>;
-			qcom,init-voltage = <2960000>;
+			regulator-min-microvolt = <3300000>;
+			regulator-max-microvolt = <3300000>;
+			qcom,init-voltage = <3300000>;
 			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
 		};
 	};
@@ -515,9 +534,9 @@
 		pm8350c_l9: regulator-pm8350c-l9 {
 			regulator-name = "pm8350c_l9";
 			qcom,set = <RPMH_REGULATOR_SET_ALL>;
-			regulator-min-microvolt = <2700000>;
-			regulator-max-microvolt = <3544000>;
-			qcom,init-voltage = <2960000>;
+			regulator-min-microvolt = <3224000>;
+			regulator-max-microvolt = <3224000>;
+			qcom,init-voltage = <3224000>;
 			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
 		};
 	};
@@ -1048,6 +1067,25 @@
 			regulator-min-microvolt = <866000>;
 			regulator-max-microvolt = <958000>;
 			qcom,init-voltage = <866000>;
+			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
+		};
+	};
+
+	rpmh-regulator-ldoh4 {
+		compatible = "qcom,rpmh-vrm-regulator";
+		qcom,resource-name = "ldoh4";
+		qcom,regulator-type = "pmic5-ldo";
+		qcom,supported-modes =
+			<RPMH_REGULATOR_MODE_LPM
+			RPMH_REGULATOR_MODE_HPM>;
+		qcom,mode-threshold-currents = <0 10000>;
+		L4H:
+		pm8450_l4: regulator-pm8450-l4 {
+			regulator-name = "pm8450_l4";
+			qcom,set = <RPMH_REGULATOR_SET_ALL>;
+			regulator-min-microvolt = <1800000>;
+			regulator-max-microvolt = <1808000>;
+			qcom,init-voltage = <1800000>;
 			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
 		};
 	};
