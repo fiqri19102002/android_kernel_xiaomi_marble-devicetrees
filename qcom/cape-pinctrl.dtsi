@@ -475,7 +475,7 @@
 			config {
 				pins = "gpio124";
 				drive-strength = <8>;   /* 8 mA */
-				bias-disable;           /* NO PULL */
+				bias-pull-down;         /* PULL DOWN */
 			};
 		};
 	};
@@ -1014,7 +1014,7 @@
 
 			config {
 				pins = "gpio91";
-				bias-disable;
+				bias-pull-down;         /* PULL DOWN */
 				drive-strength = <2>;
 			};
 		};
@@ -1348,13 +1348,13 @@
 		qupv3_se4_spi_active: qupv3_se4_spi_active {
 			mux {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				function = "qup4";
 			};
 
 			config {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				drive-strength = <6>;
 				bias-disable;
 			};
@@ -1363,15 +1363,43 @@
 		qupv3_se4_spi_sleep: qupv3_se4_spi_sleep {
 			mux {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				function = "gpio";
 			};
 
 			config {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				drive-strength = <6>;
 				bias-disable;
+			};
+		};
+	};
+
+	qupv3_se4_spi_cs_pins: qupv3_se4_spi_cs_pins {
+		qupv3_se4_spi_cs_active: qupv3_se4_spi_cs_active {
+			mux {
+				pins = "gpio19";
+				function = "qup4";
+			};
+
+			config {
+				pins = "gpio19";
+				drive-strength = <16>;
+				bias-pull-up;
+			};
+		};
+
+		qupv3_se4_spi_cs_sleep: qupv3_se4_spi_cs_sleep {
+			mux {
+				pins = "gpio19";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio19";
+				drive-strength = <16>;
+				bias-pull-up;
 			};
 		};
 	};
@@ -2785,5 +2813,130 @@
 			};
 		};
 
+	};
+
+	aw882xx {
+		/* TOP Smart PA */
+		aw882xx_reset_active_top: aw882xx_reset_active_top {
+			/* active state */
+			mux {
+				pins = "gpio1";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio1";
+				drive-strength = <2>;
+				bias-pull-down;
+				output-high;
+			};
+		};
+
+		aw882xx_reset_suspend_top: aw882xx_reset_suspend_top {
+			/* sleep state */
+			mux {
+				pins = "gpio1";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio1";
+				drive-strength = <2>;
+				bias-pull-down;
+				output-low;
+			};
+		};
+
+		/* TOP Smart PA INT */
+		aw882xx_irq_active_top: aw882xx_irq_active_top {
+			mux {
+				pins = "gpio88";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio88";
+				drive-strength = <2>;
+				bias-disable;
+				input-enable;
+			};
+		};
+
+		/* BOT Smart PA */
+		aw882xx_reset_active_bot: aw882xx_reset_active_bot {
+			/* active state */
+			mux {
+				pins = "gpio120";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio120";
+				drive-strength = <2>;
+				bias-pull-down;
+				output-high;
+			};
+		};
+
+		aw882xx_reset_suspend_bot: aw882xx_reset_suspend_bot {
+			/* sleep state */
+			mux {
+				pins = "gpio120";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio120";
+				drive-strength = <2>;
+				bias-pull-down;
+				output-low;
+			};
+		};
+	};
+
+	fpc1020 {
+		/* FP_RESET_N */
+		fpc1020_reset: fpc1020_reset {
+			mux {
+				pins = "gpio41";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio41";
+				drive-strength = <2>;
+				bias-disable;
+				output-low;
+			};
+		};
+
+		/* FP_RESET_N, state device active */
+		fpc1020_reset_high: fpc1020_reset_high {
+			mux {
+				pins = "gpio41";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio41";
+				drive-strength = <2>;
+				bias-disable;
+				output-high;
+			};
+		};
+
+		/* FP_INT_N */
+		fpc1020_irq: fpc1020_irq {
+			mux {
+				pins = "gpio40";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio40";
+				drive-strength = <2>;
+				bias-pull-down;
+			};
+		};
 	};
 };
