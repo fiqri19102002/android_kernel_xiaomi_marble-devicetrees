@@ -304,3 +304,7 @@
 	qcom,prime-mask = <0x70>;
 	qcom,silver-mask = <0x0f>;
 };
+
+#include "camera/ukee-camera.dtsi"
+#include "eva/ukee-eva.dtsi"
+#include "video/ukee-vidc.dtsi"
