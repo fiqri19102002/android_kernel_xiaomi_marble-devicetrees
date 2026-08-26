@@ -151,8 +151,8 @@
 	nxp_eusb2_repeater: eusb2_repeater@4f {
 		compatible = "nxp,eusb2-repeater";
 		reg = <0x4f>;
-		vdd18-supply = <&S10B>;
-		vdd3-supply = <&L2B>;
+		vdd1v8-supply = <&S10B>;
+		vdd3v3-supply = <&L2B>;
 		reset-gpio = <&pm8350c_gpios 7 GPIO_ACTIVE_HIGH>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&eusb2_reset_ctrl_default>;
@@ -170,7 +170,6 @@
 };
 
 &eusb2_phy0 {
-	dummy-supply = <&nxp_eusb2_repeater>;
 	usb-repeater = <&nxp_eusb2_repeater>;
 };
 
