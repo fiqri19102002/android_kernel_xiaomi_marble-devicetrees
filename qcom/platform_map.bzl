@@ -597,9 +597,12 @@ _platform_map = {
     "waipio": {
         "dtb_list": [
             {"name": "cape.dtb"},
+            {"name": "ukee.dtb"},
         ],
         "dtbo_list": [
+            {"name": "cape-mtp-pm8008-overlay.dtbo"},
             {"name": "cape-qrd-pm8010-overlay.dtbo"},
+            {"name": "ukee-mtp-pm8008-overlay.dtbo"},
         ],
     },
 }

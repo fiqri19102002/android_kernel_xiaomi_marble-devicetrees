@@ -285,12 +285,16 @@ parrot-overlays-dtb-$(CONFIG_ARCH_RAVELIN) += $(RAVELIN_BOARDS) $(RAVELIN_BASE_D
 dtb-y += $(parrot-dtb-y)
 
 CAPE_BASE_DTB += cape.dtb
+UKEE_BASE_DTB += ukee.dtb
 
 CAPE_BOARDS += \
-		cape-qrd-pm8010-overlay.dtbo
+		cape-mtp-pm8008-overlay.dtbo \
+		cape-qrd-pm8010-overlay.dtbo \
+		ukee-mtp-pm8008-overlay.dtbo
 
 cape-dtb-$(CONFIG_ARCH_CAPE) += \
 	$(call add-overlays, $(CAPE_BOARDS),$(CAPE_BASE_DTB))
+	$(call add-overlays, $(CAPE_BOARDS),$(UKEE_BASE_DTB))
 dtb-y += $(cape-dtb-y)
 
 endif
