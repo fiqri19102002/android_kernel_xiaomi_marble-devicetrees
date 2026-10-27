@@ -189,8 +189,6 @@
 
 &dsi_m16t_36_02_0a_dsc_vid {
 	mi,panel-on-dimming-delay = <120>;
-	mi,dimming-need-update-speed;
-	mi,dimming-node = <0 200 450 800 4095>;
 
 	/* AOD CONFIG*/
 	mi,doze-hbm-dbv-level = <245>;
