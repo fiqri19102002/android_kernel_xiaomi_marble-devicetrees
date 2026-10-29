@@ -188,8 +188,6 @@
 };
 
 &dsi_m16t_36_02_0a_dsc_vid {
-	mi,panel-on-dimming-delay = <120>;
-
 	/* AOD CONFIG*/
 	mi,doze-hbm-dbv-level = <245>;
 	mi,doze-lbm-dbv-level = <20>;
