@@ -200,11 +200,6 @@
 
 	qcom,mdss-dsi-display-timings {
 		timing@0 {
-			mi,mdss-dsi-hbm-on-command = [39 00 00 00 00 00 03 51 07 FF];
-			mi,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
-			mi,mdss-dsi-hbm-off-command = [39 00 00 00 00 00 03 51 07 FF];
-			mi,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
-
 			mi,mdss-dsi-doze-hbm-command = [
 				39 00 00 00 00 00 07 51 00 F5 07 FF 03 FF
 			];
