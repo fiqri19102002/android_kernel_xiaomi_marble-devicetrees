@@ -159,5 +159,6 @@
 		goodix,firmware-nameb = "goodix_firmware_TM_Second.bin";
 		goodix,config-namea = "goodix_cfg_group_TM.bin";
 		goodix,config-nameb = "goodix_cfg_group_TM_Second.bin";
+		goodix,touch-type = "primary";
 	};
 };
