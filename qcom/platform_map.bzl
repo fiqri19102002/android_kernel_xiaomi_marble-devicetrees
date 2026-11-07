@@ -596,12 +596,12 @@ _platform_map = {
     },
     "waipio": {
         "dtb_list": [
-            {"name": "cape.dtb"},
-            {"name": "ukee.dtb"},
+            {"name": "cape.dtb", "soc": "cape"},
+            {"name": "ukee.dtb", "soc": "ukee"},
         ],
         "dtbo_list": [
-            {"name": "cape-qrd-pm8010-overlay.dtbo"},
-            {"name": "ukee-mtp-pm8008-overlay.dtbo"},
+            {"name": "cape-qrd-pm8010-overlay.dtbo", "soc": "cape"},
+            {"name": "ukee-mtp-pm8008-overlay.dtbo", "soc": "ukee"},
         ],
     },
 }
@@ -625,6 +625,9 @@ def _get_dtb_lists(target, dt_overlay_supported):
                 dtb_base = dtb["name"].replace(".dtb", "")
                 for dtbo in _platform_map[dtb_node].get("dtbo_list", []):
                     if not dtbo.get("apq", True) and dtb.get("apq", False):
+                        continue
+
+                    if dtbo.get("soc") != dtb.get("soc"):
                         continue
 
                     dtbo_base = dtbo["name"].replace(".dtbo", "")
