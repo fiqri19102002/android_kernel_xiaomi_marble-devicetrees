@@ -534,7 +534,7 @@
 		pm8350c_l9: regulator-pm8350c-l9 {
 			regulator-name = "pm8350c_l9";
 			qcom,set = <RPMH_REGULATOR_SET_ALL>;
-			regulator-min-microvolt = <3224000>;
+			regulator-min-microvolt = <3200000>;
 			regulator-max-microvolt = <3224000>;
 			qcom,init-voltage = <3224000>;
 			qcom,init-mode = <RPMH_REGULATOR_MODE_HPM>;
