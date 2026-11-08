@@ -54,6 +54,7 @@
 		};
 
 		bcl_soc:bcl-soc {
+			status = "disabled";
 			compatible = "qcom,msm-bcl-soc";
 			#thermal-sensor-cells = <0>;
 		};
@@ -364,6 +365,7 @@
 	};
 
 	socd {
+		status = "disabled";
 		polling-delay-passive = <100>;
 		polling-delay = <0>;
 		//thermal-sensors = <&bcl_soc>;
