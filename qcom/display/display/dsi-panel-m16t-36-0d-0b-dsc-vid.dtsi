@@ -125,6 +125,7 @@
 
 &dsi_m16t_36_0d_0b_dsc_vid {
 	mi,panel-id = <0x4D313654 0x00360201>;
+	mi,dsc-legacy-widebus-pclk;
 	mi,max-brightness-clone = <16383>;
 	mi,normal-max-brightness-clone = <4095>;
 	mi,mdss-dsi-fac-bl-max-level = <2047>;
