@@ -13,6 +13,7 @@
 	#interrupt-cells = <4>;
 
 	qcom,pmr735b@5 {
+		status = "disabled";
 		compatible = "qcom,spmi-pmic";
 		reg = <5 SPMI_USID>;
 		#address-cells = <1>;
@@ -38,6 +39,7 @@
 
 &thermal_zones {
 	pmr735b_temp_alarm: pmr735b_tz {
+		status = "disabled";
 		polling-delay-passive = <100>;
 		polling-delay = <0>;
 		thermal-governor = "step_wise";
