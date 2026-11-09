@@ -1,4 +1,4 @@
-DTC_INCLUDE += $(srctree)/../sm8450-modules/qcom/opensource/synx-kernel
+DTC_INCLUDE += $(srctree)/../marble-modules/qcom/opensource/synx-kernel
 
 ifeq ($(CONFIG_ARCH_PINEAPPLE), y)
 include $(srctree)/$(src)/config/pineapple.mk

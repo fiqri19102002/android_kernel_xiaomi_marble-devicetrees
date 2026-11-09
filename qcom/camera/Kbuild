@@ -1,4 +1,4 @@
-DTC_INCLUDE += $(srctree)/../sm8450-modules/qcom/opensource/camera-kernel
+DTC_INCLUDE += $(srctree)/../marble-modules/qcom/opensource/camera-kernel
 
 ifeq ($(CONFIG_ARCH_CANOE), y)
 include $(srctree)/$(src)/config/canoe.mk

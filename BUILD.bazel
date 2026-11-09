@@ -18,9 +18,9 @@ kernel_dtstree(
             "**/*.bzl",
         ],
     ) + [
-        "//vendor/qcom/sm8450-modules/qcom/opensource/audio-kernel:audio_dt_bindings",
-        "//vendor/qcom/sm8450-modules/qcom/opensource/camera-kernel:camera_dt_bindings",
-        "//vendor/qcom/sm8450-modules/qcom/opensource/synx-kernel:synx_dt_bindings",
+        "//vendor/xiaomi/marble-modules/qcom/opensource/audio-kernel:audio_dt_bindings",
+        "//vendor/xiaomi/marble-modules/qcom/opensource/camera-kernel:camera_dt_bindings",
+        "//vendor/xiaomi/marble-modules/qcom/opensource/synx-kernel:synx_dt_bindings",
     ],
     visibility = ["//visibility:public"],
 )
