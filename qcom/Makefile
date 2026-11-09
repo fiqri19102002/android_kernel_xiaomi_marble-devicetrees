@@ -2,9 +2,9 @@
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
 DTC_INCLUDE += \
-	$(srctree)/../sm8450-modules/qcom/opensource/audio-kernel/include \
-	$(srctree)/../sm8450-modules/qcom/opensource/camera-kernel \
-	$(srctree)/../sm8450-modules/qcom/opensource/synx-kernel
+	$(srctree)/../marble-modules/qcom/opensource/audio-kernel/include \
+	$(srctree)/../marble-modules/qcom/opensource/camera-kernel \
+	$(srctree)/../marble-modules/qcom/opensource/synx-kernel
 endif
 
 # add-overlay defines the target with following naming convention:
