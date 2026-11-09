@@ -293,10 +293,6 @@
 			bits = <5 8>;
 		};
 	};
-
-	qfprom_sys: qfprom@0 {
-		compatible = "qcom,qfprom-sys";
-	};
 };
 
 &ufshc_mem
