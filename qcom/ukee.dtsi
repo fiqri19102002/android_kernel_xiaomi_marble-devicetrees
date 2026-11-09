@@ -270,7 +270,7 @@
 	};
 
 	cache-controller@19200000 {
-		compatible = "qcom,ukee-llcc", "qcom,llcc-v21";
+		compatible = "qcom,ukee-llcc";
 	};
 
 	ssc_sensors: qcom,msm-ssc-sensors {
