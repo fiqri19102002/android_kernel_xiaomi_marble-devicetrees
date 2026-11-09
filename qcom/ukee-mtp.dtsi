@@ -45,3 +45,29 @@
 	qcom,thermal-mitigation = <3000000 1500000 1000000 500000>;
 	qcom,wireless-fw-name = "idt9415.bin";
 };
+
+&thermal_zones {
+	pm8350b-bcl-lvl2 {
+		cooling-maps {
+			vbat_gpu2 {
+				cooling-device = <&msm_gpu 3 3>;
+			};
+		};
+	};
+
+	pm8350c-bcl-lvl2 {
+		cooling-maps {
+			vph_gpu2 {
+				cooling-device = <&msm_gpu 3 3>;
+			};
+		};
+	};
+
+	pm8350_tz {
+		cooling-maps {
+			pm8350_gpu {
+				cooling-device = <&msm_gpu 1 THERMAL_NO_LIMIT>;
+			};
+		};
+	};
+};
