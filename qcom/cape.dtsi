@@ -423,12 +423,6 @@
 			alignment = <0x0 0x400000>;
 			size = <0x0 0x400000>;
 	};
-
-	ramoops_mem: ramoops_region {
-		alloc-ranges = <0x0 0x00000000 0xffffffff 0xffffffff>;
-		size = <0x0 0x200000>;
-		no-map;
-	};
 };
 
 #include "waipio-clock.dtsi"
@@ -2158,6 +2152,7 @@
 	qcom_ramoops: qcom-ramoops {
 		compatible = "qcom,ramoops";
 		memory-region = <&ramoops_mem>;
+		console-size = <0x200000>;
 		pmsg-size = <0x200000>;
 		mem-type = <2>;
 	};

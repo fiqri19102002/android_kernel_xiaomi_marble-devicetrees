@@ -197,6 +197,11 @@
 		reg = <0x0 0xe9b00000 0x0 0x500000>;
 	};
 
+	ramoops_mem: ramoops_region@a7000000 {
+		no-map;
+		reg = <0x0 0xa7000000 0x0 0x400000>;
+	};
+
 	sp_mem: sp_region {  /* SPSS-HLOS ION shared mem */
 		compatible = "shared-dma-pool";
 		alloc-ranges = <0x0 0x00000000 0x0 0xffffffff>;
