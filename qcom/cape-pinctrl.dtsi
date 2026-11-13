@@ -1348,13 +1348,13 @@
 		qupv3_se4_spi_active: qupv3_se4_spi_active {
 			mux {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				function = "qup4";
 			};
 
 			config {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				drive-strength = <6>;
 				bias-disable;
 			};
@@ -1363,15 +1363,43 @@
 		qupv3_se4_spi_sleep: qupv3_se4_spi_sleep {
 			mux {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				function = "gpio";
 			};
 
 			config {
 				pins = "gpio16", "gpio17",
-						"gpio18", "gpio19";
+						"gpio18";
 				drive-strength = <6>;
 				bias-disable;
+			};
+		};
+	};
+
+	qupv3_se4_spi_cs_pins: qupv3_se4_spi_cs_pins {
+		qupv3_se4_spi_cs_active: qupv3_se4_spi_cs_active {
+			mux {
+				pins = "gpio19";
+				function = "qup4";
+			};
+
+			config {
+				pins = "gpio19";
+				drive-strength = <16>;
+				bias-pull-up;
+			};
+		};
+
+		qupv3_se4_spi_cs_sleep: qupv3_se4_spi_cs_sleep {
+			mux {
+				pins = "gpio19";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio19";
+				drive-strength = <16>;
+				bias-pull-up;
 			};
 		};
 	};
