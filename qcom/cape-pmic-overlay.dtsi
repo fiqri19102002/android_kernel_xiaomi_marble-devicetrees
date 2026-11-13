@@ -165,7 +165,7 @@
 	};
 
 	pm8350_wide_rfc_therm {
-		reg = <PM8350_ADC7_AMUX_THM4_100K_PU(1)>;
+		reg = <PM8350B_ADC7_GPIO4_100K_PU(1)>;
 		label = "pm8350_wide_rfc_therm";
 		qcom,ratiometric;
 		qcom,hw-settle-time = <200>;
@@ -173,7 +173,7 @@
 	};
 
 	pm8350b_rear_tof_therm {
-		reg = <PM8350_ADC7_AMUX_THM5_100K_PU(1)>;
+		reg = <PM8350B_ADC7_AMUX_THM4_100K_PU(1)>;
 		label = "pm8350b_rear_tof_therm";
 		qcom,ratiometric;
 		qcom,hw-settle-time = <200>;
@@ -315,14 +315,14 @@
 
 	pm8350_wide_rfc_therm {
 		reg = <3>;
-		io-channels = <&pmk8350_vadc PM8350_ADC7_AMUX_THM4_100K_PU(1)>;
+		io-channels = <&pmk8350_vadc PM8350B_ADC7_GPIO4_100K_PU(1)>;
 		qcom,ratiometric;
 		qcom,hw-settle-time-us = <200>;
 	};
 
 	pm8350b_rear_tof_therm {
 		reg = <4>;
-		io-channels = <&pmk8350_vadc PM8350_ADC7_AMUX_THM5_100K_PU(1)>;
+		io-channels = <&pmk8350_vadc PM8350B_ADC7_AMUX_THM4_100K_PU(1)>;
 		qcom,ratiometric;
 		qcom,hw-settle-time-us = <200>;
 	};
