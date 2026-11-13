@@ -360,12 +360,6 @@
 				hysteresis = <1000>;
 				type = "passive";
 			};
-
-			active-config1 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
 		};
 	};
 
@@ -375,12 +369,6 @@
 		thermal-sensors = <&pmk8350_adc_tm 1>;
 		trips {
 			active-config0 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			active-config1 {
 				temperature = <125000>;
 				hysteresis = <1000>;
 				type = "passive";
@@ -398,12 +386,6 @@
 				hysteresis = <1000>;
 				type = "passive";
 			};
-
-			active-config1 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
 		};
 	};
 
@@ -413,12 +395,6 @@
 		thermal-sensors = <&pmk8350_adc_tm 3>;
 		trips {
 			active-config0 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			active-config1 {
 				temperature = <125000>;
 				hysteresis = <1000>;
 				type = "passive";
@@ -436,12 +412,6 @@
 				hysteresis = <1000>;
 				type = "passive";
 			};
-
-			active-config1 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
 		};
 	};
 
@@ -451,12 +421,6 @@
 		thermal-sensors = <&pmk8350_adc_tm 5>;
 		trips {
 			active-config0 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			active-config1 {
 				temperature = <125000>;
 				hysteresis = <1000>;
 				type = "passive";
@@ -474,12 +438,6 @@
 				hysteresis = <1000>;
 				type = "passive";
 			};
-
-			active-config1 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
 		};
 	};
 
@@ -489,48 +447,6 @@
 		thermal-sensors = <&pmk8350_adc_tm 7>;
 		trips {
 			active-config0 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			active-config1 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			xo_config0: xo-config0 {
-				temperature = <78000>;
-				hysteresis = <8000>;
-				type = "passive";
-			};
-
-			xo_config1: xo-config1 {
-				temperature = <80000>;
-				hysteresis = <10000>;
-				type = "passive";
-			};
-
-			display_test_config1: display-test-config1 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			display_test_config2: display-test-config2 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			display_test_config3: display-test-config3 {
-				temperature = <125000>;
-				hysteresis = <1000>;
-				type = "passive";
-			};
-
-			display_test_config4: display-test-config4 {
 				temperature = <125000>;
 				hysteresis = <1000>;
 				type = "passive";
