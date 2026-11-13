@@ -181,7 +181,7 @@
 	};
 
 	pm8350b_usb_conn_therm {
-		reg = <PM8350B_ADC7_AMUX_THM4_100K_PU>;
+		reg = <PMR735A_ADC7_GPIO1_100K_PU>;
 		label = "pm8350b_usb_conn_therm";
 		qcom,ratiometric;
 		qcom,hw-settle-time = <200>;
@@ -189,7 +189,7 @@
 	};
 
 	pm8350b_wl_chg_therm {
-		reg = <PM8350B_ADC7_GPIO2_100K_PU>;
+		reg = <PMR735A_ADC7_GPIO2_100K_PU>;
 		label = "pm8350b_wl_chg_therm";
 		qcom,ratiometric;
 		qcom,hw-settle-time = <200>;
@@ -329,21 +329,21 @@
 
 	pm8350b_usb_conn_therm {
 		reg = <5>;
-		io-channels = <&pmk8350_vadc PM8350B_ADC7_AMUX_THM4_100K_PU>;
+		io-channels = <&pmk8350_vadc PMR735A_ADC7_GPIO1_100K_PU>;
 		qcom,ratiometric;
 		qcom,hw-settle-time-us = <200>;
 	};
 
 	pm8350b_wl_chg_therm {
 		reg = <6>;
-		io-channels = <&pmk8350_vadc PM8350B_ADC7_GPIO2_100K_PU>;
+		io-channels = <&pmk8350_vadc PMR735A_ADC7_GPIO2_100K_PU>;
 		qcom,ratiometric;
 		qcom,hw-settle-time-us = <200>;
 	};
 
 	pmk8350_xo_therm {
 		reg = <7>;
-		io-channels = <&pmk8350_vadc PMK8350_ADC7_AMUX_THM1_100K_PU>;
+		io-channels = <&pmk8350_vadc PMR735A_ADC7_GPIO3_100K_PU>;
 		qcom,ratiometric;
 		qcom,hw-settle-time-us = <200>;
 	};
