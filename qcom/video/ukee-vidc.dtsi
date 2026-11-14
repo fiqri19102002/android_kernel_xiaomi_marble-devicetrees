@@ -1,0 +1,5 @@
+#include "waipio-vidc.dtsi"
+
+&msm_vidc {
+	compatible = "qcom,msm-vidc", "qcom,msm-vidc-waipio", "qcom,msm-vidc-iris2", "qcom,msm-vidc-ukee";
+};
