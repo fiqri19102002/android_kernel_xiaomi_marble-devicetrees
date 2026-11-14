@@ -117,6 +117,9 @@
 };
 
 &qupv3_se4_spi {
+	pinctrl-0 = <&qupv3_se4_spi_active &qupv3_se4_spi_cs_active>;
+	pinctrl-1 = <&qupv3_se4_spi_sleep &qupv3_se4_spi_cs_sleep>;
+
 	m16t-touch@0 {
 		status = "ok";
 		compatible = "goodix,9916r-spi";
