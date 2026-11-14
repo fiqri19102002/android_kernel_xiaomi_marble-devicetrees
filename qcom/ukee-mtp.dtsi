@@ -78,3 +78,40 @@
 	qcom,thermal-mitigation = <3000000 1500000 1000000 500000>;
 	qcom,wireless-fw-name = "idt9415.bin";
 };
+
+&qupv3_se15_i2c {
+	status = "ok";
+
+	/* TOP Smart PA */
+	aw882xx_smartpa@34 {
+		compatible = "awinic,aw882xx_smartpa";
+		reg = <0x34>;
+		irq-gpio = <&tlmm 88 0x2008>;
+		reset-gpio = <&tlmm 1 0x2008>;
+		pinctrl-names = "default", "sleep";
+		pinctrl-0 = <&aw882xx_reset_active_top &aw882xx_irq_active_top>;
+		pinctrl-1 = <&aw882xx_reset_suspend_top>;
+		dc-flag = <0>;
+		sync-flag = <1>;
+		sound-channel = <0>;
+		aw-cali-mode = "aw_none ";
+		spksw-gpio = <&tlmm 52 0>;
+		status = "ok";
+	};
+
+	/* BOT Smart PA */
+	aw882xx_smartpa@35 {
+		compatible = "awinic,aw882xx_smartpa";
+		reg = <0x35>;
+		irq-gpio = <&tlmm 63 0x2008>;
+		reset-gpio = <&tlmm 120 0x2008>;
+		pinctrl-names = "default", "sleep";
+		pinctrl-0 = <&aw882xx_reset_active_bot>;
+		pinctrl-1 = <&aw882xx_reset_suspend_bot>;
+		dc-flag = <0>;
+		sync-flag = <1>;
+		sound-channel = <1>;
+		aw-cali-mode = "aw_none ";
+		status = "ok";
+	};
+};
