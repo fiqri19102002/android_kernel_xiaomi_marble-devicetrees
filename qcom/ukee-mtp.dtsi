@@ -26,6 +26,31 @@
 		qcom,wait_time_lpm = <45>;
 		qcom,wait_time_lpi = <45>;
 	};
+
+	fingerprint_fpc {
+		status = "ok";
+		compatible = "fpc,fpc1020";
+		interrupt-parent = <&tlmm>;
+		interrupts = <40 0x0>;
+		fpc,gpio_rst = <&tlmm 41 0x0>;
+		fpc,gpio_irq = <&tlmm 40 0x0>;
+		fp_vdd_vreg-supply = <&L1C>;
+		pinctrl-names = "fpc1020_reset_reset",
+				"fpc1020_reset_active",
+				"fpc1020_irq_active";
+
+		pinctrl-0 = <&fpc1020_reset>;
+		pinctrl-1 = <&fpc1020_reset_high>;
+		pinctrl-2 = <&fpc1020_irq>;
+	};
+
+	fingerprint_goodix {
+		status = "ok";
+		compatible = "goodix,fingerprint";
+		l6c_vdd-supply = <&L6C>;
+		goodix,gpio-reset = <&tlmm 41 0x0>;
+		goodix,gpio-irq = <&tlmm 40 0x0>;
+	};
 };
 
 &pm8350c_switch0 {
