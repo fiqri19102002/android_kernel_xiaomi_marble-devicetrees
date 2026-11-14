@@ -51,6 +51,12 @@
 		goodix,gpio-reset = <&tlmm 41 0x0>;
 		goodix,gpio-irq = <&tlmm 40 0x0>;
 	};
+
+	xiaomi_touch {
+		compatible = "xiaomi-touch";
+		status = "ok";
+		touch,name = "xiaomi-touch";
+	};
 };
 
 &pm8350c_switch0 {
