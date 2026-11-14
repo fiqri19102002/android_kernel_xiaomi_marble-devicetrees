@@ -464,6 +464,7 @@
 	};
 
 	wsa_swr_gpios: wsa_swr_clk_data_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa_swr_clk_active &wsa_swr_data_active>;
@@ -473,6 +474,7 @@
 	};
 
 	wsa2_swr_gpios: wsa2_swr_clk_data_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&wsa2_swr_clk_active &wsa2_swr_data_active>;
@@ -504,6 +506,7 @@
 	};
 
 	cdc_dmic01_gpios: cdc_dmic01_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic01_clk_active &cdc_dmic01_data_active>;
@@ -513,6 +516,7 @@
 	};
 
 	cdc_dmic23_gpios: cdc_dmic23_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic23_clk_active &cdc_dmic23_data_active>;
@@ -522,6 +526,7 @@
 	};
 
 	cdc_dmic45_gpios: cdc_dmic45_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic45_clk_active &cdc_dmic45_data_active>;
@@ -531,6 +536,7 @@
 	};
 
 	cdc_dmic67_gpios: cdc_dmic67_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&cdc_dmic67_clk_active &cdc_dmic67_data_active>;
@@ -546,6 +552,7 @@
 
 &soc {
 	wsa_spkr_en1: wsa_spkr_en1_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_1_sd_n_active>;
@@ -553,6 +560,7 @@
 	};
 
 	wsa_spkr_en2: wsa_spkr_en2_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr_2_sd_n_active>;
@@ -560,6 +568,7 @@
 	};
 
 	wsa2_spkr_en1: wsa2_spkr_en1_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr2_1_sd_n_active>;
@@ -567,6 +576,7 @@
 	};
 
 	wsa2_spkr_en2: wsa2_spkr_en2_pinctrl {
+		status = "disabled";
 		compatible = "qcom,msm-cdc-pinctrl";
 		pinctrl-names = "aud_active", "aud_sleep";
 		pinctrl-0 = <&spkr2_2_sd_n_active>;
