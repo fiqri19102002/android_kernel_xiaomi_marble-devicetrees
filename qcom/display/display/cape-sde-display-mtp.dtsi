@@ -141,6 +141,11 @@
 			&dsi_r66451_amoled_120hz_cmd_cphy
 			&dsi_r66451_amoled_120hz_video_cphy>;
 	};
+
+	m16t-touch@0 {
+		panel = <&dsi_m16t_36_02_0a_dsc_vid
+			&dsi_m16t_36_0d_0b_dsc_vid>;
+	};
 };
 
 &spmi_bus {
@@ -151,7 +156,9 @@
 					&dsi_r66451_amoled_144hz_video_cphy
 					&dsi_r66451_amoled_video_cphy
 					&dsi_r66451_amoled_120hz_cmd_cphy
-					&dsi_r66451_amoled_120hz_video_cphy>;
+					&dsi_r66451_amoled_120hz_video_cphy
+					&dsi_m16t_36_02_0a_dsc_vid
+					&dsi_m16t_36_0d_0b_dsc_vid>;
 		};
 	};
 };
