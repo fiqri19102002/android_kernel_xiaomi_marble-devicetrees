@@ -175,6 +175,10 @@
 				0x22 0x07
 				/* Output Voltage Swing to 500mV; default is 450mV */
 				0x63 0x08>;
+		qcom,param-override-seq-host =
+				<0x62 0x08
+				0x10 0x07
+				0x1 0xa>;
 	};
 };
 
