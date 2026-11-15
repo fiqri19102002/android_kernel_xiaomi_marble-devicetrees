@@ -256,6 +256,7 @@
 	};
 
 	sde_dsi1: qcom,dsi-display-secondary {
+		status = "disabled";
 		compatible = "qcom,dsi-display";
 		label = "secondary";
 
