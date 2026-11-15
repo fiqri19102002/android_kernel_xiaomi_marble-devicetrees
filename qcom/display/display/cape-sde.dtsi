@@ -20,6 +20,7 @@
 	};
 
 	sde_dp: qcom,dp_display@ae90000 {
+		status = "disabled";
 		cell-index = <0>;
 		compatible = "qcom,dp-display";
 		usb-phy = <&usb_qmp_dp_phy>;
