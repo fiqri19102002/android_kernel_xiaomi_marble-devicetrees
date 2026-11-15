@@ -52,6 +52,10 @@
 		goodix,gpio-irq = <&tlmm 40 0x0>;
 	};
 
+	thermal-message {
+		board-sensor = "VIRTUAL-SENSOR0";
+	};
+
 	xiaomi_touch {
 		compatible = "xiaomi-touch";
 		status = "ok";
