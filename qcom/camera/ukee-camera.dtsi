@@ -489,7 +489,7 @@
 
 	cam_csiphy2: qcom,csiphy2@ace8000 {
 		cell-index = <2>;
-		compatible = "qcom,csiphy-v2.1.3", "qcom,csiphy";
+		compatible = "qcom,csiphy-v2.1.3-m16t", "qcom,csiphy";
 		reg = <0xace8000 0x2000>;
 		reg-names = "csiphy";
 		reg-cam-base = <0xe8000>;
@@ -523,7 +523,7 @@
 
 	cam_csiphy3: qcom,csiphy3@acea000 {
 		cell-index = <3>;
-		compatible = "qcom,csiphy-v2.1.3", "qcom,csiphy";
+		compatible = "qcom,csiphy-v2.1.3-m16t", "qcom,csiphy";
 		reg = <0xacea000 0x2000>;
 		reg-names = "csiphy";
 		reg-cam-base = <0xea000>;
