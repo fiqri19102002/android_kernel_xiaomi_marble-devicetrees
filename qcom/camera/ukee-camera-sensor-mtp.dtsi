@@ -5,6 +5,7 @@
 	led_flash_triple_rear: qcom,camera-flash@1 {
 		cell-index = <1>;
 		compatible = "qcom,camera-flash";
+		flash-type = <CAM_FLASH_TYPE_PMIC>;
 		flash-source = <&pm8350c_flash0 &pm8350c_flash1>;
 		torch-source = <&pm8350c_torch0 &pm8350c_torch1>;
 		switch-source = <&pm8350c_switch2>;
@@ -14,6 +15,7 @@
 	led_flash_triple_rear_aux2: qcom,camera-flash@2 {
 		cell-index = <2>;
 		compatible = "qcom,camera-flash";
+		flash-type = <CAM_FLASH_TYPE_PMIC>;
 		flash-source = <&pm8350c_flash0 &pm8350c_flash1>;
 		torch-source = <&pm8350c_torch0 &pm8350c_torch1>;
 		switch-source = <&pm8350c_switch2>;
@@ -23,6 +25,7 @@
 	led_flash_triple_rear_aux: qcom,camera-flash@3 {
 		cell-index = <3>;
 		compatible = "qcom,camera-flash";
+		flash-type = <CAM_FLASH_TYPE_PMIC>;
 		flash-source = <&pm8350c_flash0 &pm8350c_flash1>;
 		torch-source = <&pm8350c_torch0 &pm8350c_torch1>;
 		switch-source = <&pm8350c_switch2>;
