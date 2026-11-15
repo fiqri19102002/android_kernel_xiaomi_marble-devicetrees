@@ -61,6 +61,7 @@
 			"mdp_core_clk";
 
 	vddio-supply = <&L12C>;
+	vddd-supply = <&L1D>;
 	vci-supply = <&L13C>;
 	extvdd-supply = <&L1D>;
 };
