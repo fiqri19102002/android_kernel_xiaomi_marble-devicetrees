@@ -188,6 +188,7 @@
 
 &dsi_m16t_36_02_0a_dsc_vid {
 	mi,dsc-legacy-widebus-pclk;
+	mi,disable-dimming-bl;
 
 	/* AOD CONFIG*/
 	mi,doze-hbm-dbv-level = <245>;
