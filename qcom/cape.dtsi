@@ -2154,7 +2154,7 @@
 		memory-region = <&ramoops_mem>;
 		console-size = <0x200000>;
 		pmsg-size = <0x200000>;
-		mem-type = <2>;
+		mem-type = <0>;
 	};
 
 	logbuf: qcom,logbuf-vendor-hooks {
